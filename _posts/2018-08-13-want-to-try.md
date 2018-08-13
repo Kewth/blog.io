@@ -1,10 +1,12 @@
 ---
 layout: post
-title: 这是一篇博客文章模板-ojbk
+title: nice 大夫
 date: 2018-8-13
 categories: blog
-tags: [标签一-ojbk,标签二-ojbk]
+tags: [nice,大夫]
 description: 文章金句。
 ---
 
-try it
+高兴高兴  
+顺便道出一句~~千古名言~~:  
+# hello world !
