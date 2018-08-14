@@ -3,7 +3,294 @@ layout: page
 description: "博客页面"
 ---
 
-<div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com"></a></div>
+<!DOCTYPE html>
+<html class="gr__127_0_0_1" style=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index_files/solarized_dark.css">
+    <link rel="stylesheet" href="index_files/markdown.css">
+    <script src="index_files/highlight.js"></script>
+    <script src="index_files/marked.js"></script>
+    <script src="index_files/TweenLite.js"></script>
+    <script src="index_files/base64.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",
+            "HTML-CSS": {
+                preferredFont: "STIX",
+                availableFonts: ["STIX", "TeX"],
+                imageFont: null
+            }
+        });
+    </script>
+</head><style id="stylish-11" class="stylish" type="text/css">@namespace url(http://www.w3.org/1999/xhtml);
+
+/*!
+ * custom-source-family.css
+ * https://n2o.io/go?page=custom.css
+ *
+ * Copyright 2018 Francis Zhao <francis@n2o.io>
+ * https://n2o.io/license
+ *
+ * Date: 2018-03-11T15:00+06:00
+ */
+
+html,
+[lang=zh-CN] {
+    font-family: "Source Han Sans SC", "Source Han Sans", "HanHei SC", "Microsoft YaHei", sans-serif;
+}
+
+[lang=zh-TW] {
+    font-family: "Source Han Sans TC", "Source Han Sans", "HanHei TC", "Microsoft JhengHei", sans-serif;
+}
+
+[lang=zh-HK] {
+    font-family: "Source Han Sans TC", "Source Han Sans", "HanHei TC", "Microsoft JhengHei", sans-serif;
+}
+
+[lang=ja-JP] {
+    font-family: "Source Han Sans", "Yu Gothic", sans-serif;
+}
+
+[lang=ko-KR] {
+    font-family: "Source Han Sans K", "Source Han Sans", "Malgun Gothic", sans-serif;
+}
+
+body,
+input,
+textarea,
+keygen,
+select,
+button {
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* 字体替换：西里尔字母 */
+
+@font-face {
+    font-family: "Arial";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "Tahoma";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "Verdana";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "Courier";
+    src: local("Source Code Pro");
+}
+
+@font-face {
+    font-family: "Courier New";
+    src: local("Source Code Pro");
+}
+
+@font-face {
+    font-family: "Consolas";
+    src: local("Source Code Pro");
+}
+
+
+/* 字体替换：中文 (简体) */
+
+@font-face {
+    font-family: "SimSun";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "SimSun-ExtB";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "宋体";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "NSimSun";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "新宋体";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "SimHei";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "黑体";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "Microsoft YaHei";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "微软雅黑";
+    src: local("Source Han Sans SC");
+}
+
+@font-face {
+    font-family: "STHeiti SC";
+    src: local("PingFang SC");
+}
+
+
+/* 字体替换：中文 (繁體) */
+
+@font-face {
+    font-family: "MingLiU";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "MingLiU-ExtB";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "MingLiU_HKSCS";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "MingLiU_HKSCS-ExtB";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "PMingLiU";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "PMingLiU-ExtB";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "Microsoft JhengHei";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "微軟正黑體";
+    src: local("Source Han Sans TC");
+}
+
+@font-face {
+    font-family: "STHeiti TC";
+    src: local("PingFang TC");
+}
+
+
+/* i really want this to be global */
+
+
+/* 字体替换：特定网站 */
+/* 广告隐藏：通用 */
+
+.adsbygoogle {
+    display: none !important;
+}
+
+
+/* 广告隐藏：特定网站 */</style>
+<body data-gr-c-s-loaded="true" style="margin-bottom: 48px !important;">
+    <section class="container">
+        <article id="js-markdown" class="markdown-content"><p><strong>Welcome! This is the</strong> <img src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" width="40" height="20"> <a style="position: relative;" href="#FFD477D9967F4D7D81EC118679006910" id="FFD477D9967F4D7D81EC118679006910"></a>th <strong>click!</strong></p>
+</article>
+    </section>
+<script src="index_files/index.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="index_files/s3downbar.css"><link rel="stylesheet" type="text/css" href="index_files/contextmenu.css"><link rel="stylesheet" type="text/css" href="index_files/tooltip.css"><div id="s3downbar-ibmbeeacmbeeaebmfjpmnlgkhoejinha" style="box-sizing: initial !important; position: fixed; white-space: nowrap; width: 100% !important; left: 0px; bottom: 0px; border-top: 1px solid rgb(153, 153, 153); transform-origin: left bottom 0px; z-index: 2147483647; margin: 0px; padding: 2px 0px; background-color: rgb(238, 238, 238); color: rgb(34, 34, 34); display: flex !important; transform: scale(1) !important;"><style type="text/css" media="print">#s3downbar-ibmbeeacmbeeaebmfjpmnlgkhoejinha { display: none !important; }</style><div style="box-sizing: initial !important; position: absolute !important;" id="s3downbar_resize_pane" is_top="false"><div style="box-sizing: initial !important;" class="tooltip_box" is_top="false"></div><div style="box-sizing: initial !important;" class="tooltip_arrow" is_top="false"></div></div><div style="box-sizing: initial !important; color: rgb(34, 34, 34) !important; position: relative !important; order: 4 !important;" class="s3dmBox" id="s3downbar_hide_button" is_hidden="false"><div id="s3downbar_hide_button_img" style="box-sizing: initial !important; background-image: url(&quot;moz-extension://f08845cf-faaa-4128-a4d4-9420cb0fe772/skin/s3dm_icons.png&quot;) !important; display: inline-block !important;"></div><div style="box-sizing: initial !important;" class="tooltip_box" is_top="false"><div style="box-sizing: initial !important;" class="tooltipText">Hide Download Bar</div><div style="box-sizing: initial !important;" class="tooltipText">Ctrl + Shift + Z = Show/Hide Download Bar</div></div><div style="box-sizing: initial !important;" class="tooltip_arrow" is_top="false"></div></div><div style="box-sizing: initial !important; color: rgb(34, 34, 34) !important; position: relative !important;" class="s3dmBox" id="s3downbar_main_menu_button" is_hidden="false"><img style="box-sizing: initial !important;" src="index_files/logo16.png"><span style="box-sizing: initial !important;">下载管理</span><div style="box-sizing: initial !important;" class="tooltip_box" is_top="false"><div style="box-sizing: initial !important;" class="tooltipText">Download Manager (S3)</div></div><div style="box-sizing: initial !important;" class="tooltip_arrow" is_top="false"></div></div><div style="box-sizing: initial !important; color: rgb(34, 34, 34) !important; position: relative !important; order: 2 !important;" class="s3dmBox" id="s3downbar_clear_button" is_hidden="false">清除<div style="box-sizing: initial !important;" class="tooltip_box" is_top="false"><div style="box-sizing: initial !important;" class="tooltipText">左键点击： 清除所有已完成的下载</div><div style="box-sizing: initial !important;" class="tooltipText">右键点击： 完全撤销</div></div><div style="box-sizing: initial !important;" class="tooltip_arrow" is_top="false"></div></div><div style="box-sizing: initial !important; color: rgb(34, 34, 34) !important; position: relative !important; order: 1 !important;" class="s3dmBox" id="s3downbar_holder_summary_progress" is_hidden="false"><div style="box-sizing: initial !important;">100%</div><div style="box-sizing: initial !important;" class="tooltip_box" is_top="false"><div style="box-sizing: initial !important;" class="tooltipText">下载历史</div></div><div style="box-sizing: initial !important;" class="tooltip_arrow" is_top="false"></div></div><div style="box-sizing: initial !important;" id="s3downbar_download_data_listbox"><div style="box-sizing: initial !important; max-height: 26px !important;" id="s3downbar_download_data_listbox_scroll" list_count="1"><div style="box-sizing: initial !important;" id="s3downbar_download_data_list_empty">Download list is empty</div><div id="s3db_C4CA4238A0B923820DCC509A6F75849B" class="download_data_box db_finishedHbox" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) !important;" click_handle="finished_click_handle">
+		<div class="download_data_box_iframe_box"><div id="s3downbar_download_box_iframe" is_hidden="true" class="download_data_box_iframe"></div></div>
+		<div id="s3downbar_download_box_progressremainder" class="download_data_box_progressremainder" is_hidden="true"></div>
+		<div id="s3downbar_download_box_progress" class="download_data_box_progress" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) !important;" is_hidden="true"></div>
+		<div id="s3downbar_download_box_data" class="download_data_box_data">
+			<img src="index_files/delete2.png" id="s3downbar_download_box_img" class="download_data_box_img" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCElEQVQ4jZ2TvYqDQBRG75MEdFKKRZ4hXcoYsLObxtRCSJcH8DkylQ9gtT5C0gbsBgQLO8EfzhbLLgm7cWM+OOU9zHe5IyIiQMH8fMj38DiOWGtnMQzDlwTAWouIzKIsSwAeBIvFgjAMJ3Ec57kgDEOapiFJErIs+7N4FEXTgsPhQBzHuK5LXdfIXV4SGGNQSuH7Pl3XzRcAVFVF13XvVbjP7XZjt9ux3W45nU60bTstWK/X5HlOnuecz2eWyyXGGK7XK8fjkSAI2Gw2zwWe56G1RmvNfr/ncrk8vChNU1ar1esVZu/AcRyiKJpEKfVc8O4pF8MwUJblLPq+Byh+fuS/5X+nEBH5BPCAztSbeAFoAAAAAElFTkSuQmCC&quot;) no-repeat scroll 50% 50% / contain !important;" no_image="false" is_hidden="false">
+			<img src="" id="s3downbar_download_box_img_queue" class="download_data_box_img" is_hidden="true">
+			<img src="" id="s3downbar_download_box_picToShrink" pictoshrink="true" is_hidden="true" class="download_data_box_img">
+			<div id="s3downbar_download_box_filename" class="download_data_box_filename">bitbug_favicon.ico</div>
+			<div id="s3downbar_download_box_progress_data" class="download_data_box_progress_data" is_hidden="true">
+				<div id="s3downbar_download_box_progress_percent" class="download_data_box_progress_percent" is_hidden="true">未知</div>
+				<div id="s3downbar_download_box_progress_remaintime" class="download_data_box_progress_remaintime" is_hidden="false">未知</div>
+				<div id="s3downbar_download_box_progress_bytesReceived" class="download_data_box_progress_bytesReceived" is_hidden="true">4 KB</div>
+				<div id="s3downbar_download_box_progress_speed" class="download_data_box_progress_speed" is_hidden="false">-.--</div>
+			</div>
+		</div>
+	<div style="box-sizing: initial !important; position: fixed !important; z-index: 50 !important;"><div style="box-sizing: initial !important;" class="tooltip_box" is_top="false"><div id="download_data_tooltip" class="download_data_tooltip">
+		<div class="download_data_tooltip_head">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB6ElEQVRYhe2XvYriUBiGDxZqIYgKwV47axu9hlnwBhRFbK3FThBS+HMBXoB1QBsFI1inSyFiNayOaKGDEEkKn63iZlZnZ1eNsyzzwtvl5H3Id77znQjxrwj4Bjzjvp6Bp0vhrw8It/X6BgJYABiGgaZprnq/39sQ350AAGiahhDCVauqevoMXwAfAlSrVRRFucn1ev16AEVRTg9bloWu65im+VfbXVXV2wFGoxGSJCGEIBKJ0O/3HwdgmiaSJBEIBCgUCoRCIYLBILvdzl72s50cuhvAdDpFCEGpVAKgUqkghGAymZy/yA0AwzAIBAKEw2EqlQrRaBSfz8d6vbaXLVwFAOh2u/j9foQQeL1eOp2Os8xPrgMArFYrxuMxy+WSP9BpqN0N4FrdE+DlUsBgMECWZZrNJoqiMJ/PXQN4o+PxSLlcvnjcJhIJZrOZewCWZZHP5xFCEIvF6PV6qKpKq9Uil8vh8XiIx+NsNpvbALLZLLIsnzmdTiOEIJVKOdvxJPv8TyaTlEql6wF+50wmw+FweLc8xWLx9mlYq9UYDodn1jTNmXe6XvHL1U7XdRqNxv/Tho8HqNfrqKp6k9vttjub8Fp/AbwHsATY7/c31/wjb7dbO3/hBPjcXzMHxMWJd2e9nIV/pn4AT5OHdWP3plMAAAAASUVORK5CYII=" id="s3downbar_download_tooltip_img" class="download_data_tooltip_img" no_image="false">
+			<div id="s3downbar_download_tooltip_filename" class="download_data_tooltip_filename">bitbug_favicon.ico </div>
+		</div>
+		<div class="download_data_tooltip_data_box" id="s3downbar_download_tooltip_data_box" is_hidden_progress="true" is_hidden_finish="false">
+			<table class="download_data_tooltip_data">
+				<tbody><tr id="s3downbar_download_tooltip_source_box"><td><div>Source:</div></td><td><input id="s3downbar_download_tooltip_source" class="download_data_tooltip_url" readonly="true" title="http://www.bitbug.net/" value="http://www.bitbug.net/" type="text"></td></tr>
+				<tr><td><div>下载源：</div></td><td><input id="s3downbar_download_tooltip_from" class="download_data_tooltip_url" readonly="true" title="http://www.bitbug.net/favicon" value="http://www.bitbug.net/favicon" type="text"></td></tr>
+				<tr><td><div>保存到：</div></td><td><div id="s3downbar_download_tooltip_to">/home/kewth/Downloads/bitbug_favicon.ico</div></td></tr>
+				<tr class="download_progress"><td><div>状态：</div></td><td><div id="s3downbar_download_tooltip_status">4 KB / 未知 ( -.-- )</div></td></tr>
+				<tr class="download_finish"><td><div>文件大小：</div></td><td><div id="s3downbar_download_tooltip_size" filenotfound="true">文件未找到</div></td></tr>
+				<tr class="download_finish" id="s3downbar_download_virus_scan_box" is_hidden="true"><td><div id="s3downbar_download_virus_scan_label">Virus scan:</div></td><td><a id="s3downbar_download_virus_scan" target="_blank"></a></td></tr>
+				<tr><td><div>开始时间:</div></td><td><div id="s3downbar_download_tooltip_timeStart">2018.08.14 - 12:45:59</div></td></tr>
+				<tr class="download_finish"><td><div>预计完成时间：</div></td><td><div id="s3downbar_download_tooltip_timeEnd">&lt;00:01</div></td></tr>
+				<tr class="download_progress"><td><div>剩余时间：</div></td><td><div id="s3downbar_download_tooltip_timeLeft">未知</div></td></tr>
+				<tr class="download_progress"><td><div>完成率：</div></td><td><div id="s3downbar_download_tooltip_percent">未知</div></td></tr>
+				<tr class="download_finish"><td><div>平均速度：</div></td><td><div id="s3downbar_download_tooltip_speed">未知</div></td></tr>
+			</tbody></table>
+			<div class="download_data_tooltip_img_preview_box download_finish"><div class="download_data_tooltip_img_box">
+				<img src="" id="s3downbar_download_tooltip_img_preview" is_hidden="true" class="download_data_tooltip_img_preview download_finish" width="120" height="120">
+				<div id="s3downbar_download_tooltip_img_size" class="download_data_tooltip_img_size"></div>
+			</div></div>
+		</div>
+		<div class="download_data_tooltip_hint" id="s3downbar_download_tooltip_hint_progress" is_hidden="true">
+			<div>mouse double click: download pause/resume</div>
+			<div>mouse middle click: download cancel</div>
+		</div>
+		<div class="download_data_tooltip_hint" id="s3downbar_download_tooltip_hint_finish" is_hidden="false">
+			<div>mouse double click: open file</div>
+			<div>mouse double click + Ctrl: open dir</div>
+			<div style="padding-top: 4px !important;">mouse middle click: delete from list</div>
+			<div>mouse middle click + Ctrl: delete from system</div>
+			<div style="padding-top: 4px !important;">press mouse button + Ctrl: drag &amp; drop</div>
+		</div>
+	</div></div><div style="box-sizing: initial !important;" class="tooltip_arrow" is_top="false"></div></div></div></div></div></div></body><div id="wimpulation-console-container"><iframe src="index_files/console.html"></iframe></div></html>
 
 {% for post in paginator.posts %}
 <div class="post-preview">
