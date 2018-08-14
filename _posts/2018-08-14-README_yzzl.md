@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: About-YZZL
@@ -26,7 +25,7 @@ description: 这里是YZZL
 * [编译方式](#re_comp)
 * [更新日志](#upd_dir)  
 
-**<div id="li_introduce">介绍:</div>**
+<div id="li_introduce">介绍:</div>
 
 A simpe game.
 
