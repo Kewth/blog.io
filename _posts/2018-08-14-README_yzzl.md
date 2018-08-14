@@ -25,7 +25,7 @@ description: 这里是YZZL
 * [编译方式](#re_comp)
 * [更新日志](#upd_dir)  
 
-<div id="li_introduce">介绍:</div>
+# <div id="li_introduce">介绍:</div>
 
 A simpe game.
 
@@ -43,7 +43,9 @@ A simpe game.
 如果你用的是Linux版本,恭喜,你可以享受到自动更新服务!!!再也不用担心玩的版本太老了!!!
 
 
-<div id="upd_dir">Here the writer list some important update:</div>
+# <div id="upd_dir">介绍:</div>
+# <div id="upd_dir">Here the writer list some important update:</div>
+# <div id="upd_dir">介绍:</div>
 
 In 2018:
 
