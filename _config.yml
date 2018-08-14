@@ -1,6 +1,6 @@
 # Site settings
 title: Kewth's blog # 你的博客名字，可以定义修订
-header-img: "img/green.jpg"
+header-img: "img/HY_mr.jpg"
 tagline: "cn"  
 description: "This is a blog to say hello world."  # 一句话描述你的博客
 baseurl: ""
@@ -43,7 +43,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Kewth" # 你的名字
+      author: "Kewth-blog" # 你的名字
       header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
