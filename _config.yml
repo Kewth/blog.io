@@ -22,6 +22,7 @@ github_username: Kewth
 facebook_username: 
 weibo_username: 
 zhihu_username: 
+luogu_usernameid: Kewth
 
 # Build settings  
 # use Github Flavored Markdown !important  
@@ -43,7 +44,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Kewth-blog" # 你的名字
+      author: "Kewth" # 你的名字
       header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 

@@ -35,6 +35,17 @@
                     </li>
                     {% endif %}
                     
+                    {% if site.luogu_usernameid %}
+                    <li>
+                        <a href="https://www.luogu.org/space/show?uid={{ site.luogu_usernameid }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-luogu fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+
                     <!--
                     {% if site.douban_username %}
                     <li>
