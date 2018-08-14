@@ -7,25 +7,19 @@ tags: [YZZL-new,Just read me]
 description: 这里是YZZL
 ---
 
-**The writer , ~~the smartest man in the virtual world~~  who call himself Kewth'-K.D , first wrote this on 2018.4. 7 .**
-
-**There the writer must thank a friend named DaXiaLiu.**
-
-**In fact he made the game (1. 0 and 2. 0) first and the writer just sequel this game.**
-
-**You can ignore the game but you can't look down on the game or the writer.**
-
-**Of couse it's just a small game to , but I hope everyone including me play it can enjoy itself.**
-
-**This update log is made on 2018.4. 7.**
-
-**And the game is made in so long long ago that nobody remeber it.**
+**The writer , ~~the smartest man in the virtual world~~  who call himself Kewth'-K.D , first wrote this on 2018.4. 7 .**  
+**There the writer must thank a friend named DaXiaLiu.**  
+**In fact he made the game (1. 0 and 2. 0) first and the writer just sequel this game.**  
+**You can ignore the game but you can't look down on the game or the writer.**  
+**Of couse it's just a small game to , but I hope everyone including me play it can enjoy itself.**  
+**This update log is made on 2018.4. 7.**  
+**And the game is made in so long long ago that nobody remeber it.**  
 
 * [简介](#li_introduce)  
 * [编译方式](#re_comp)
 * [更新日志](#upd_dir)  
 
-# <div id="li_introduce">介绍:</div>
+<div id="li_introduce">介绍:</div>
 
 A simpe game.
 
@@ -43,9 +37,7 @@ A simpe game.
 如果你用的是Linux版本,恭喜,你可以享受到自动更新服务!!!再也不用担心玩的版本太老了!!!
 
 
-# <div id="upd_dir">介绍:</div>   
-# <div id="upd_dir">Here the writer list some important update:</div>  
-# <div id="upd_dir">介绍:</div>   
+<div id="upd_dir">Here the writer list some important update:</div>  
 
 In 2018:
 
@@ -71,6 +63,9 @@ In 2018:
 > > 9. 改变受自然伤害后死亡会崩溃的版本特性
 > > 
 > > 10. 添加形象的血条和蓝条
+
+
+
 
 > Day 5:
 > > 1. 改变了以往纯随机刷图的方式,现在你会碰到一些事先规划的建筑和一些~~惊悚~~惊喜
@@ -373,16 +368,14 @@ Some tips:
 <div id="tip_run">跑酷基本说明:</div>
 
 ' '( < space > ):跳跃2格  
-'6':跳跃1格  
+'w':跳跃1格  
 '\n'( < CR > ):向前冲刺2格  
 
 值得注意的是:
-1. 最多只能进连续进行2段跳(无论是一格还是两格) , 冲刺没有限制
+1. 最多只能进连续进行2段跳(无论是一格还是两格) , 冲刺没有限制  
+2. 地图中的<font color=BLue>@</font>表示存档点,死亡后可在该处复活  
 
-2. 地图中的<font color=BLue>@</font>表示存档点,死亡后可在该处复活
-
-如下:
-
+如下:  
 其他细节完全可以自己摸透,我就~~懒得讲了~~很遗憾的不讲了   
 
 先贴一张图:
@@ -391,9 +384,8 @@ Some tips:
 
 还是一张图:
 
-(上图均截自6.14版本,与实际会有出入)
+(上图均截自6.14版本,与实际会有出入)  
 界面上的pos表示已走过的路程(过了200请受我一拜),$表示捡到的money  
-
-十分容易上手 ~~,不保证不会产生剁手的冲动~~  
+十分容易上手 ~~,不保证不会产生剁手的冲动~~   
 
 
