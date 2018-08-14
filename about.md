@@ -5,8 +5,8 @@ description: "This kewth's blog "
 header-img: "img/green.jpg"
 ---
 
-这是一个叫Kewth的蒟蒻的网站   
-This is a super super powerful website.   
+这是一个叫Kewth的蒟蒻的辣鸡网站   
+This is a super super powerful website of a powerful person named Kewth.   
 
 你可能不认识我,谁是Kewth?   
 You must know Kewth , so why do you ask?   
