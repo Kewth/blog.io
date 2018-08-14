@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: About YZZL
+title: About-YZZL
 date: 2018-8-14
 categories: blog
 tags: [YZZL-new,Just read me]
