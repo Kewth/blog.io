@@ -3,8 +3,15 @@ layout: page
 description: "博客页面"
 ---
 
+<a href="#blog_begin">文章</a>
+
 <div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com"></a></div>
 
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+
+<a name="blog_begin"><strong>下面是华丽的文章:</strong></a>
+
+<!-- don't zai zhe xia mian do anything --> 
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
