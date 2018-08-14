@@ -1,157 +1,94 @@
-<html lang="zh-cn">
-<head>
+<!-- <html lang="zh-cn"> -->
+<a href="https://www.cnblogs.com/ECJTUACM-873284962/p/6833391.html">原文地址</a>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="referrer" content="origin" />
-<meta property="og:description" content="切比雪夫多项式 概述： 切比雪夫多项式是与棣美弗定理有关，以递归方式定义的一系列正交多项式序列。 通常，第一类切比雪夫多项式以符号Tn表示， 第二类切比雪夫多项式用Un表示。切比雪夫多项式 Tn 或 " />
-<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=PX31qVjOE47mNaZI9JUSFK-ajuzMnpXA9PeteRNR1Qw1"/>
-<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory.css?v=EanP3quXYv9G0oFCmz4BNBHvmK7M_Si1iD1EpUHL_441"/>
-<link type="text/css" rel="stylesheet" href="/blog/customcss/329976.css?v=%2bcD7Hu7Ru0l5fbQSUopyeqldHt0%3d"/>
-<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.css?v=XGOE8_i3XCsAIQHcgl5c_8VAMMKRkj0W3Eckyc8qbso1"/>
-<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/ECJTUACM-873284962/rss"/>
-<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/ECJTUACM-873284962/rsd.xml"/>
-<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/ECJTUACM-873284962/wlwmanifest.xml"/>
-<script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
-<script type="text/javascript">var currentBlogApp = 'ECJTUACM-873284962', cb_enable_mathjax=true;var isLogined=false;</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'blogpost-body', processEscapes: true },
-        TeX: {
-            equationNumbers: { autoNumber: ['AMS'], useLabelIds: true }, extensions: ['extpfeil.js'] },
-            'HTML-CSS': { linebreaks: { automatic: true } },
-            SVG: { linebreaks: { automatic: true } }
-        });
-    </script><script src="//mathjax.cnblogs.com/2_7_2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script src="/bundles/blog-common.js?v=M03aVfZ8QFd-WbinG9a-QXWifrkNB2YI5lN9M8cSzzg1" type="text/javascript"></script>
-</head>
-<body>
-<a name="top"></a>
-<div id="page_begin_html"></div><script>load_page_begin_html();</script>
-
-<!--done-->
-<div id="home">
-<div id="header">
-	<div id="blogTitle">
-	<a id="lnkBlogLogo" href="http://www.cnblogs.com/ECJTUACM-873284962/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="原文地址" /></a>
-
-<!--done-->
-
-
-
-
-	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-
-		<div class="blogStats">
-
-			<div id="blog_stats">
-</div>
-
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
-</div><!--end: header 头部 -->
-
-<div id="main">
-	<div id="mainContent">
-	<div class="forFlow">
-
-<div id="post_detail">
-<!--done-->
-<div id="topics">
-	<div class = "post">
-		<h1 class = "postTitle">
-			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/ECJTUACM-873284962/p/7562111.html">浅谈切比雪夫多项式推导及其实现模版归类</a>
-		</h1>
-		<div class="clear"></div>
-		<div class="postBody">
-			<div id="cnblogs_post_body" class="blogpost-body"><h1 style="text-align: center;">切比雪夫多项式</h1>
+<div id="cnblogs_post_body" class="blogpost-body"><a name="_labelTop"></a><div id="navCategory"><p style="font-size:18px"><b>目录</b></p><ul><li><a href="#_label0">解析</a></li><li><a href="#_label1">推广</a></li><li><a href="#_label2">解析</a></li></ul></div><p>&nbsp;</p><h1 style="text-align: center;" id="autoid-0-0-0">切比雪夫多项式</h1>
 <p>&nbsp;</p>
-<h3>概述：</h3>
+<h3 id="autoid-1-0-0">概述：</h3>
 <p>切比雪夫多项式是与棣美弗定理有关，以递归方式定义的一系列正交多项式序列。 通常，第一类切比雪夫多项式以符号Tn表示， 第二类切比雪夫多项式用Un表示。切比雪夫多项式 Tn 或 Un 代表 n 阶多项式。</p>
 <p>切比雪夫多项式在逼近理论中有重要的应用。这是因为第一类切比雪夫多项式的根（被称为切比雪夫节点）可以用于多项式插值。相应的插值多项式能最大限度地降低龙格现象，并且提供多项式在连续函数的最佳一致逼近。</p>
 <p>&nbsp;</p>
-<h3>基本性质：</h3>
+<h3 id="autoid-1-0-1">基本性质：</h3>
 <p>对每个非负整数n， Tn(x) 和 Un(x) 都为 n次多项式。 并且当n为偶（奇）数时，它们是关于x 的偶（奇）函数， 在写成关于x的多项式时只有偶（奇）次项。</p>
 <p>&nbsp;</p>
 <p>按切比雪夫多项式的展开式：</p>
 <p align="left">一个N 次多项式按切比雪夫多项式的展开式为如下，多项式按切比雪夫多项式的展开可以用 Clenshaw 递推公式计算。第一类切比雪夫多项式由以下递推关系确定。</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150344103-460546445.png" alt="" /></p>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150344103-460546445.png" alt=""></p>
 <p align="left">也可以用母函数表示。</p>
-<p>&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150401603-856488059.png" alt="" /></p>
+<p>&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150401603-856488059.png" alt=""></p>
 <p align="left">第二类切比雪夫多项式&nbsp;由以下递推关系给出。</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150416134-1332996858.png" alt="" /></p>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150416134-1332996858.png" alt=""></p>
 <p align="left">此时母函数为</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150427025-1986901210.png" alt="" /></p>
-<h3 align="left">Clenshaw递推公式</h3>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150427025-1986901210.png" alt=""></p>
+<h3 id="autoid-1-0-2" align="left">Clenshaw递推公式</h3>
 <p align="left">在数值分析中，Clenshaw递推公式&nbsp;(由Charles William Clenshaw发现)是一个求切比雪夫多项式的值的递归方法。</p>
 <p align="left">&nbsp;</p>
-<h3 align="left">切比雪夫多项式</h3>
+<h3 id="autoid-1-0-3" align="left">切比雪夫多项式</h3>
 <p align="left"><em>N</em>次切比雪夫多项式，是下面形式的多项式<em>p</em>(<em>x</em>)</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150534384-1769844184.png" alt="" /></p>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150534384-1769844184.png" alt=""></p>
 <p>&nbsp;</p>
 <p align="left">其中<em>T</em><em><sub>n</sub></em>是<em>n</em>阶切比雪夫多项式</p>
 <p align="left">&nbsp;</p>
-<h3 align="left">Clenshaw递推公式</h3>
+<h3 id="autoid-1-0-4" align="left">Clenshaw递推公式</h3>
 <p align="left">Clenshaw递推公式可以用来计算切比雪夫多项式的值。给定</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150629400-1514610152.png" alt="" /></p>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150629400-1514610152.png" alt=""></p>
 <p>&nbsp;</p>
 <p align="left">我们定义</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150651118-251802754.png" alt="" /></p>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150651118-251802754.png" alt=""></p>
 <p align="left">于是</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150711071-462038226.png" alt="" /></p>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150711071-462038226.png" alt=""></p>
 <p>&nbsp;</p>
 <p align="left">(注)上面的公式在&nbsp;N=0,1的情况下无意义。此时我们可以用下面的公式：</p>
-<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150802571-1541550390.png" alt="" /></p>
-<p align="left"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150811212-19347029.png" alt="" /></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150817790-1150988229.png" alt="" /></p>
+<p align="left">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150802571-1541550390.png" alt=""></p>
+<p align="left"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150811212-19347029.png" alt=""></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150817790-1150988229.png" alt=""></p>
 <p style="text-align: center;" align="left">(downward, omit if N=0)</p>
-<p align="left"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150901853-114366214.png" alt="" /></p>
-<p align="left"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150914978-294321040.png" alt="" /></p>
+<p align="left"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150901853-114366214.png" alt=""></p>
+<p align="left"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150914978-294321040.png" alt=""></p>
 <p>&nbsp;</p>
 <p align="left">这里</p>
-<p align="left"><img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150933462-1074528266.png" alt="" /></p>
+<p align="left"><img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150933462-1074528266.png" alt=""></p>
 <p align="left">或者</p>
-<p align="left">&nbsp;<img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150959931-1978147818.png" alt="" /></p>
-<p align="left">其中<img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920151020118-908147891.png" alt="" />是第二类切比雪夫多项式</p>
-<h3 align="left">棣莫弗（de Moivre）原理</h3>
-<p>　　设两个复数（用三角形式表示）Z1=r1(cos&theta;1+isin&theta;1），Z2=r2(cos&theta;2+isin&theta;2），则:</p>
-<p>　　Z1Z2=r1r2[cos（&theta;1+&theta;2）+isin（&theta;1+&theta;2）].</p>
+<p align="left">&nbsp;<img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920150959931-1978147818.png" alt=""></p>
+<p align="left">其中<img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920151020118-908147891.png" alt="">是第二类切比雪夫多项式</p>
+<h3 id="autoid-1-0-5" align="left">棣莫弗（de Moivre）原理</h3>
+<p>　　设两个复数（用三角形式表示）Z1=r1(cosθ1+isinθ1），Z2=r2(cosθ2+isinθ2），则:</p>
+<p>　　Z1Z2=r1r2[cos（θ1+θ2）+isin（θ1+θ2）].</p>
 <div>
-<h2>解析</h2>
+<div style="text-align: right"><a href="#_labelTop">Return Top</a><a name="_label0"></a></div><h2 id="autoid-1-0-6">解析</h2>
 </div>
-<p>　　证：先讲一下复数的三角形式的概念。在复平面C上，用向量<strong>Z</strong>(a,b）来表示Z=a+bi.于是，该向量可以分成两个在实轴，虚轴上的分向量.如果向量<strong>Z</strong>与实轴的夹角为&theta;，这两个分向量的模分别等于rcos&theta;,risin&theta;（r=&radic;a^2+b^2）.所以，复数Z可以表示为Z=r(cos&theta;+isin&theta;）.这里&theta;称为复数Z的辐角.</p>
-<p>　　因为Z1=r1(cos&theta;1+isin&theta;1），Z2=r2(cos&theta;2+isin&theta;2），所以</p>
-<p>　　Z1Z2=r1r2(cos&theta;1+isin&theta;1）（cos&theta;2+isin&theta;2）</p>
-<p>　　=r1r2(cos&theta;1cos&theta;2+icos&theta;1sin&theta;2+isin&theta;1cos&theta;2-sin&theta;1sin&theta;2）</p>
-<p>　　=r1r2[(cos&theta;1cos&theta;2-sin&theta;1sin&theta;2）+i(cos&theta;1sin&theta;2+sin&theta;1cos&theta;2）]</p>
-<p>　　=r1r2[cos（&theta;1+&theta;2）+isin（&theta;1+&theta;2）].</p>
+<p>　　证：先讲一下复数的三角形式的概念。在复平面C上，用向量<strong>Z</strong>(a,b）来表示Z=a+bi.于是，该向量可以分成两个在实轴，虚轴上的分向量.如果向量<strong>Z</strong>与实轴的夹角为θ，这两个分向量的模分别等于rcosθ,risinθ（r=√a^2+b^2）.所以，复数Z可以表示为Z=r(cosθ+isinθ）.这里θ称为复数Z的辐角.</p>
+<p>　　因为Z1=r1(cosθ1+isinθ1），Z2=r2(cosθ2+isinθ2），所以</p>
+<p>　　Z1Z2=r1r2(cosθ1+isinθ1）（cosθ2+isinθ2）</p>
+<p>　　=r1r2(cosθ1cosθ2+icosθ1sinθ2+isinθ1cosθ2-sinθ1sinθ2）</p>
+<p>　　=r1r2[(cosθ1cosθ2-sinθ1sinθ2）+i(cosθ1sinθ2+sinθ1cosθ2）]</p>
+<p>　　=r1r2[cos（θ1+θ2）+isin（θ1+θ2）].</p>
 <p>　　其实该定理可以推广为一般形式：</p>
 <div>
-<h2>推广</h2>
+<div style="text-align: right"><a href="#_labelTop">Return Top</a><a name="_label1"></a></div><h2 id="autoid-1-1-0">推广</h2>
 </div>
-<p>　　设n个复数Z1=r1(cos&theta;1+isin&theta;1），Z2=r2(cos&theta;2+isin&theta;2），&hellip;&hellip;，Zn=rn(cos&theta;n+isin&theta;n），则：</p>
-<p>　　Z1Z2&hellip;&hellip;Zn=r1r2&hellip;&hellip;rn[cos（&theta;1+&theta;2+&hellip;&hellip;+&theta;n)+isin（&theta;1+&theta;2+&hellip;&hellip;+&theta;n)].</p>
+<p>　　设n个复数Z1=r1(cosθ1+isinθ1），Z2=r2(cosθ2+isinθ2），……，Zn=rn(cosθn+isinθn），则：</p>
+<p>　　Z1Z2……Zn=r1r2……rn[cos（θ1+θ2+……+θn)+isin（θ1+θ2+……+θn)].</p>
 <div>
-<h2>解析</h2>
+<div style="text-align: right"><a href="#_labelTop">Return Top</a><a name="_label2"></a></div><h2 id="autoid-1-2-0">解析</h2>
 </div>
 <p>　　证：用数学归纳法即可，归纳基础就是两个复数相乘的棣莫弗定理。</p>
-<p>　　如果把棣莫弗定理和欧拉（Euler）公式&ldquo;e^i&theta;=cos&theta;+isin&theta;&rdquo;（参见《泰勒公式》，严格的证明需要复分析）放在一起看，则可以用来理解欧拉公式的意义。</p>
+<p>　　如果把棣莫弗定理和欧拉（Euler）公式“e^iθ=cosθ+isinθ”（参见《泰勒公式》，严格的证明需要复分析）放在一起看，则可以用来理解欧拉公式的意义。</p>
 <p>　　利用棣莫弗定理有：</p>
-<p>　　Z1Z2&hellip;&hellip;Zn=r1r2&hellip;&hellip;rn [cos（&theta;1+&theta;2+&hellip;&hellip;+&theta;n)+isin（&theta;1+&theta;2+&hellip;&hellip;+&theta;n)]</p>
-<p>　　如果可以把所有的复数改写成指数的形式，即：Z1=r1e^i&theta;1,Z2=r2e^i&theta;2，&hellip;&hellip;，Zn=rne^i&theta;n,</p>
-<p>　　Z1Z2&hellip;&hellip;Zn=r1r2&hellip;&hellip;rn e^i（&theta;1+&theta;2+&hellip;&hellip;+&theta;n)</p>
+<p>　　Z1Z2……Zn=r1r2……rn [cos（θ1+θ2+……+θn)+isin（θ1+θ2+……+θn)]</p>
+<p>　　如果可以把所有的复数改写成指数的形式，即：Z1=r1e^iθ1,Z2=r2e^iθ2，……，Zn=rne^iθn,</p>
+<p>　　Z1Z2……Zn=r1r2……rn e^i（θ1+θ2+……+θn)</p>
 <p>　　这和指数的可加性一致.</p>
-<p align="left">　　在一般形式中如果令Z1=Z2=&hellip;&hellip;=Zn=Z，则能导出复数开方的公式.有兴趣可自己推推看.</p>
+<p align="left">　　在一般形式中如果令Z1=Z2=……=Zn=Z，则能导出复数开方的公式.有兴趣可自己推推看.</p>
 <p align="left">下面这题可作为切比雪夫多项式的模版：</p>
-<h1 align="center"><strong><span style="color: #1a5cc8;">Trig Function<span style="color: green;"><br />
+<h1 id="autoid-1-3-0" align="center"><strong><span style="color: #1a5cc8;">Trig Function<span style="color: green;"><br>
 </span></span></strong></h1>
-<p align="center"><strong><span style="color: green;">TimeLimit: 2000/1000 MS (Java/Others)&nbsp;&nbsp;&nbsp;&nbsp;Memory Limit:32768/32768 K (Java/Others)<br />
-Total Submission(s): 714&nbsp;&nbsp;&nbsp;&nbsp;Accepted Submission(s): 206<br />
-<br />
+<p align="center"><strong><span style="color: green;">TimeLimit: 2000/1000 MS (Java/Others)&nbsp;&nbsp;&nbsp;&nbsp;Memory Limit:32768/32768 K (Java/Others)<br>
+Total Submission(s): 714&nbsp;&nbsp;&nbsp;&nbsp;Accepted Submission(s): 206<br>
+<br>
 </span></strong></p>
 <p><strong><span style="color: #7ca9ed;"><span style="font-size: 14px;">Problem Description</span></span></strong></p>
 <p style="background: white;">&nbsp;</p>
-<p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">f(cos(x))=cos(n&lowast;x) holds for all x.</span></span></p>
+<p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">f(cos(x))=cos(n∗x) holds for all x.</span></span></p>
 <p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">Given two integersn and m , you need to calculate the coefficient of x^m​​ in f(x), modulo 998244353</span></span></p>
 <p style="background: white;">&nbsp;</p>
 <p align="left">
@@ -161,7 +98,7 @@ Total Submission(s): 714&nbsp;&nbsp;&nbsp;&nbsp;Accepted Submission(s): 206<br /
 <p style="background: white;">&nbsp;</p>
 <p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">Multiple testcases (no more than 100).</span></span></p>
 <p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">Each test casecontains one line consisting of two integers n and m.</span></span></p>
-<p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">1&le;n&le;10<sup><span style="font-size: 14px;">9</span></sup><span style="font-size: 14px;">,0&le;m&le;10<sup><span style="font-size: 14px;">4</span></sup></span></span></span></p>
+<p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">1≤n≤10<sup><span style="font-size: 14px;">9</span></sup><span style="font-size: 14px;">,0≤m≤10<sup><span style="font-size: 14px;">4</span></sup></span></span></span></p>
 <p style="background: white;">&nbsp;</p>
 <p align="left">
 <span style="font-size: 14px;"><span style="font-size: 14px;"><span style="font-size: 14px;"><span style="font-size: 14px;">
@@ -178,23 +115,23 @@ Total Submission(s): 714&nbsp;&nbsp;&nbsp;&nbsp;Accepted Submission(s): 206<br /
 <p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">998244352</span></span></p>
 <p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">0</span></span></p>
 <p style="margin: 0px;"><span style="margin: 0px;" lang="EN-US"><span style="font-size: 14px;">2</span></span></p>
-<p><span style="font-size: 14px;"><br />
+<p><span style="font-size: 14px;"><br>
 </span></p>
 <p><span style="font-size: 14px;">【题意】</span></p>
 <p><span style="font-size: 14px;">给出一个函数，代入n,m后求出x<sup><span style="font-size: 14px;">m</span></sup><span style="font-size: 14px;">的系数，并取模输出。</span></span></p>
-<p><span style="font-size: 14px;"><br />
+<p><span style="font-size: 14px;"><br>
 </span></p>
 <p><span style="font-size: 14px;">【思路】</span></p>
-<p><span style="font-size: 14px;"><br />
+<p><span style="font-size: 14px;"><br>
 </span></p>
 <p><span style="font-size: 14px;">我们先尝试把cos(nx)化为cos(x)的形式，然后把cos(x)用x代换，就可以得到f(x)=...的形式，然后就能得到所求的系数了。</span></p>
-<p><span style="font-size: 14px;"><br />
+<p><span style="font-size: 14px;"><br>
 </span></p>
 <p><span style="font-size: 14px;">那么我们如何把cos(nx)化为cos(x)的形式呢。</span></p>
-<p><span style="font-size: 14px;"><br />
+<p><span style="font-size: 14px;"><br>
 </span></p>
 <p><span style="font-size: 14px;">其实可以尝试着暴力写出前几项的形式。如下图：</span></p>
-<p><span style="font-size: 14px;"><img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920155541306-1831832325.jpg" alt="" /></span></p>
+<p><span style="font-size: 14px;"><img src="https://images2017.cnblogs.com/blog/1100338/201709/1100338-20170920155541306-1831832325.jpg" alt=""></span></p>
 <p>&nbsp;</p>
 <p><span style="font-size: 14px;">由写出的式子，我们可以发现以下几点：</span></p>
 <ol>
@@ -210,299 +147,79 @@ Total Submission(s): 714&nbsp;&nbsp;&nbsp;&nbsp;Accepted Submission(s): 206<br /
 </ol>
 <p><span style="font-size: 14px;">依照这个规律分类讨论一下即可。</span></p>
 <p><span style="font-size: 14px;">于是我们可以得到以下一般解析式</span></p>
-<p><span style="font-size: 18px;"><span style="font-size: 18px;"><img src="http://img.blog.csdn.net/20170916181047210" alt="" /></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-size: 18px;"><img src="http://img.blog.csdn.net/20170916181047210" alt=""></span></span></p>
 <p><span style="font-size: 18px;">注意"!!"不是阶乘的阶乘，而是不超过n且与n具有相同奇偶性的所有正整数连乘积。</span></p>
 <p><span style="font-size: 18px;">n分类讨论下,当n为偶数时m=2*k, n为奇数时m=2*k-1</span></p>
 <p><span style="font-size: 18px;">还有注意下"!!"的约分,可能下面的比上面的大</span></p>
 <p>于是我们就得到了以下代码：</p>
-<div class="cnblogs_code">
-<pre><span style="color: #008080;"> 1</span> #include&lt;bits/stdc++.h&gt;
-<span style="color: #008080;"> 2</span> <span style="color: #0000ff;">using</span> <span style="color: #0000ff;">namespace</span><span style="color: #000000;"> std;
-</span><span style="color: #008080;"> 3</span> typedef <span style="color: #0000ff;">long</span> <span style="color: #0000ff;">long</span><span style="color: #000000;"> ll;
-</span><span style="color: #008080;"> 4</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">int</span> maxn=1e5+<span style="color: #800080;">5</span><span style="color: #000000;">;
-</span><span style="color: #008080;"> 5</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">int</span> mod=<span style="color: #800080;">998244353</span><span style="color: #000000;">;
-</span><span style="color: #008080;"> 6</span> ll fac[maxn]={<span style="color: #800080;">1</span><span style="color: #000000;">};
-</span><span style="color: #008080;"> 7</span> <span style="color: #000000;">ll n,m;
-</span><span style="color: #008080;"> 8</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> init()
-</span><span style="color: #008080;"> 9</span> <span style="color: #000000;">{
-</span><span style="color: #008080;">10</span>     <span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">int</span> i=<span style="color: #800080;">1</span>;i&lt;maxn;i++<span style="color: #000000;">)
-</span><span style="color: #008080;">11</span>         fac[i]=fac[i-<span style="color: #800080;">1</span>]*i%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">12</span> <span style="color: #000000;">}
-</span><span style="color: #008080;">13</span> ll qmod(ll x,<span style="color: #0000ff;">int</span><span style="color: #000000;"> q)
-</span><span style="color: #008080;">14</span> <span style="color: #000000;">{
-</span><span style="color: #008080;">15</span>     ll res=<span style="color: #800080;">1</span><span style="color: #000000;">;
-</span><span style="color: #008080;">16</span>     <span style="color: #0000ff;">while</span><span style="color: #000000;">(q)
-</span><span style="color: #008080;">17</span> <span style="color: #000000;">    {
-</span><span style="color: #008080;">18</span>         <span style="color: #0000ff;">if</span>(q%<span style="color: #800080;">2</span><span style="color: #000000;">)
-</span><span style="color: #008080;">19</span>             res=res*x%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">20</span>         x=x*x%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">21</span>         q/=<span style="color: #800080;">2</span><span style="color: #000000;">;
-</span><span style="color: #008080;">22</span> <span style="color: #000000;">    }
-</span><span style="color: #008080;">23</span>     <span style="color: #0000ff;">return</span><span style="color: #000000;"> res;
-</span><span style="color: #008080;">24</span> <span style="color: #000000;">}
-</span><span style="color: #008080;">25</span> <span style="color: #0000ff;">int</span> main(<span style="color: #0000ff;">void</span><span style="color: #000000;">)
-</span><span style="color: #008080;">26</span> <span style="color: #000000;">{
-</span><span style="color: #008080;">27</span> <span style="color: #000000;">    init();
-</span><span style="color: #008080;">28</span>     <span style="color: #0000ff;">while</span>(~scanf(<span style="color: #800000;">"</span><span style="color: #800000;">%lld%lld</span><span style="color: #800000;">"</span>,&amp;n,&amp;<span style="color: #000000;">m))
-</span><span style="color: #008080;">29</span> <span style="color: #000000;">    {
-</span><span style="color: #008080;">30</span>         <span style="color: #0000ff;">if</span>(m&gt;<span style="color: #000000;">n)
-</span><span style="color: #008080;">31</span>             puts(<span style="color: #800000;">"</span><span style="color: #800000;">0</span><span style="color: #800000;">"</span><span style="color: #000000;">);
-</span><span style="color: #008080;">32</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span>(n%<span style="color: #800080;">2</span>&amp;&amp;m%<span style="color: #800080;">2</span>==<span style="color: #800080;">0</span><span style="color: #000000;">)
-</span><span style="color: #008080;">33</span>             puts(<span style="color: #800000;">"</span><span style="color: #800000;">0</span><span style="color: #800000;">"</span><span style="color: #000000;">);
-</span><span style="color: #008080;">34</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span>(n%<span style="color: #800080;">2</span>==<span style="color: #800080;">0</span>&amp;&amp;m%<span style="color: #800080;">2</span><span style="color: #000000;">)
-</span><span style="color: #008080;">35</span>             puts(<span style="color: #800000;">"</span><span style="color: #800000;">0</span><span style="color: #800000;">"</span><span style="color: #000000;">);
-</span><span style="color: #008080;">36</span>         <span style="color: #0000ff;">else</span>
-<span style="color: #008080;">37</span> <span style="color: #000000;">        {
-</span><span style="color: #008080;">38</span>             ll fz=n%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">39</span>             <span style="color: #0000ff;">if</span>(m&gt;=<span style="color: #800080;">1</span><span style="color: #000000;">)
-</span><span style="color: #008080;">40</span> <span style="color: #000000;">            {
-</span><span style="color: #008080;">41</span>                 <span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">int</span> i=n-m+<span style="color: #800080;">1</span>;i&lt;=n+m-<span style="color: #800080;">1</span>;i++<span style="color: #000000;">)
-</span><span style="color: #008080;">42</span> <span style="color: #000000;">                {
-</span><span style="color: #008080;">43</span>                     <span style="color: #0000ff;">if</span>(i%<span style="color: #800080;">2</span>==(n+m-<span style="color: #800080;">2</span>)%<span style="color: #800080;">2</span><span style="color: #000000;">)
-</span><span style="color: #008080;">44</span> <span style="color: #000000;">                    {
-</span><span style="color: #008080;">45</span>                         fz=fz*i%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">46</span> <span style="color: #000000;">                    }
-</span><span style="color: #008080;">47</span> <span style="color: #000000;">                }
-</span><span style="color: #008080;">48</span>                 ll tmp=fz*qmod(fac[m],mod-<span style="color: #800080;">2</span>)%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">49</span>                 <span style="color: #0000ff;">if</span>((n-m)/<span style="color: #800080;">2</span>%<span style="color: #800080;">2</span><span style="color: #000000;">)
-</span><span style="color: #008080;">50</span>                     tmp=-<span style="color: #000000;">tmp;
-</span><span style="color: #008080;">51</span>                 printf(<span style="color: #800000;">"</span><span style="color: #800000;">%lld\n</span><span style="color: #800000;">"</span>,(tmp+mod)%<span style="color: #000000;">mod);
-</span><span style="color: #008080;">52</span> <span style="color: #000000;">            }
-</span><span style="color: #008080;">53</span>             <span style="color: #0000ff;">else</span>
-<span style="color: #008080;">54</span> <span style="color: #000000;">            {
-</span><span style="color: #008080;">55</span>                 ll t=<span style="color: #800080;">1</span><span style="color: #000000;">;
-</span><span style="color: #008080;">56</span>                 <span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">int</span> i=n+m-<span style="color: #800080;">1</span>;i&lt;=n-m;i++<span style="color: #000000;">)
-</span><span style="color: #008080;">57</span> <span style="color: #000000;">                {
-</span><span style="color: #008080;">58</span>                     <span style="color: #0000ff;">if</span>(i%<span style="color: #800080;">2</span>==(n+m-<span style="color: #800080;">2</span>)%<span style="color: #800080;">2</span><span style="color: #000000;">)
-</span><span style="color: #008080;">59</span>                         t=t*i%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">60</span> <span style="color: #000000;">                }
-</span><span style="color: #008080;">61</span>                 ll tmp=fz*qmod(fac[m],mod-<span style="color: #800080;">2</span>)%mod*qmod(t, mod-<span style="color: #800080;">2</span>)%<span style="color: #000000;">mod;
-</span><span style="color: #008080;">62</span>                 <span style="color: #0000ff;">if</span>((n-m)/<span style="color: #800080;">2</span>%<span style="color: #800080;">2</span><span style="color: #000000;">)
-</span><span style="color: #008080;">63</span>                     tmp=-<span style="color: #000000;">tmp;
-</span><span style="color: #008080;">64</span>                 printf(<span style="color: #800000;">"</span><span style="color: #800000;">%lld\n</span><span style="color: #800000;">"</span>,(tmp+mod)%<span style="color: #000000;">mod);
-</span><span style="color: #008080;">65</span> <span style="color: #000000;">            }
-</span><span style="color: #008080;">66</span> <span style="color: #000000;">        }
-</span><span style="color: #008080;">67</span> <span style="color: #000000;">    }
-</span><span style="color: #008080;">68</span> }</pre>
-</div>
-<p>&nbsp;</p></div><div id="MySignature"></div>
-<div class="clear"></div>
-<div id="blog_post_info_block">
-<div id="BlogPostCategory"></div>
-<div id="EntryTag"></div>
-<div id="blog_post_info">
-</div>
-<div class="clear"></div>
-<div id="post_next_prev"></div>
-</div>
-
-
-		</div>
-	</div>
-	<script type="text/javascript">var allowComments=true,cb_blogId=329976,cb_entryId=7562111,cb_blogApp=currentBlogApp,cb_blogUserGuid='e1cc9c32-fce8-e611-845c-ac853d9f53ac',cb_entryCreatedDate='2017/9/20 16:06:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
-
-</div><!--end: topics 文章、评论容器-->
-</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
-<div id='comment_form' class='commentform'>
-<a name='commentform'></a>
-<div id='divCommentShow'></div>
-<div id='comment_form_container'></div>
-<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
-<div id='ad_t2'></div>
-<div id='opt_under_post'></div>
-<div id='cnblogs_c1' class='c_ad_block'></div>
-<div id='under_post_news'></div>
-<div id='cnblogs_c2' class='c_ad_block'></div>
-<div id='under_post_kb'></div>
-<div id='HistoryToday' class='c_ad_block'></div>
-<script type='text/javascript'>
-    fixPostBody();
-    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
-    deliverAdT2();
-    deliverAdC1();
-    deliverAdC2();
-    loadNewsAndKb();
-    loadBlogSignature();
-    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
-    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
-    loadOptUnderPost();
-    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
-</script>
-</div>
-
-
-	</div><!--end: forFlow -->
-	</div><!--end: mainContent 主体内容容器-->
-
-	<div id="sideBar">
-		<div id="sideBarMain">
-
-<!--done-->
-<div class="newsItem">
-	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
-</div>
-
-			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
-
-			<div id="leftcontentcontainer">
-				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
-			</div>
-
-		</div><!--end: sideBarMain -->
-	</div><!--end: sideBar 侧边栏容器 -->
-	<div class="clear"></div>
-	</div><!--end: main -->
-	<div class="clear"></div>
-	<div id="footer">
-
-<!--done-->
-Copyright &copy;2018 Angel_Kitty
-	</div><!--end: footer -->
-</div><!--end: home 自定义的最大容器 -->
-<!--PageEndHtml Block Begin-->
-<link rel="stylesheet" type="text/css" href="https://files.cnblogs.com/files/ECJTUACM-873284962/flat-ui.min.css"/>
-<script type="text/javascript" src="https://files.cnblogs.com/files/ECJTUACM-873284962/background-change.js"></script>
-<script src="https://files.cnblogs.com/files/ECJTUACM-873284962/prettify.js"></script>
-<script type="text/javascript" language="javascript">
-　　//Setting ico for cnblogs
-　　var linkObject = document.createElement('link');
-　　linkObject.rel = "shortcut icon";
-　　linkObject.href = "https://files.cnblogs.com/files/ECJTUACM-873284962/favicon.ico";
-　　document.getElementsByTagName("head")[0].appendChild(linkObject);
-</script>
-<script type="text/javascript">
-(function() {
-     $("pre").addClass("prettyprint");
-     prettyPrint();
-})();
-</script>
-<script type="text/javascript" src="https://files.cnblogs.com/files/ECJTUACM-873284962/Comments.js"></script>
-<script language="javascript" type="text/javascript">
-// 生成目录索引列表
-function GenerateContentList()
-{
-var mainContent = $('#cnblogs_post_body');
-var h2_list = $('#cnblogs_post_body h2');//如果你的章节标题不是h2,只需要将这里的h2换掉即可
-if(mainContent.length < 1)
-    return;
-
-if(h2_list.length>0)
-{
-    var content = '<a name="_labelTop"></a>';
-    content += '<div id="navCategory">';
-    content += '<p style="font-size:18px"><b>目录</b></p>';
-    content += '<ul>';
-    for(var i=0; i<h2_list.length; i++)
-    {
-        var go_to_top = '<div style="text-align: right"><a href="#_labelTop">Return Top</a><a name="_label' + i + '"></a></div>';
-        $(h2_list[i]).before(go_to_top);
-        var h3_list = $(h2_list[i]).nextAll("h3");
-        var li3_content = '';
-        for(var j=0; j<h3_list.length; j++)
-        {
-            var tmp = $(h3_list[j]).prevAll('h2').first();
-            if(!tmp.is(h2_list[i]))
-                break;
-            var li3_anchor = '<a name="_label' + i + '_' + j + '"></a>';
-            $(h3_list[j]).before(li3_anchor);
-            li3_content += '<li><a href="#_label' + i + '_' + j + '">' + $(h3_list[j]).text() + '</a></li>';
-        }
-        var li2_content = '';
-        if(li3_content.length > 0)
-            li2_content = '<li><a href="#_label' + i + '">' + $(h2_list[i]).text() + '</a><ul>' + li3_content + '</ul></li>';
-        else
-            li2_content = '<li><a href="#_label' + i + '">' + $(h2_list[i]).text() + '</a></li>';
-        content += li2_content;
-    }
-    content += '</ul>';
-    content += '</div><p>&nbsp;</p>';
-    if($('#cnblogs_post_body').length != 0 )
-    {
-        $($('#cnblogs_post_body')[0]).prepend(content);
-    }
-}
-$(mainContent[0]).prepend(qqinfo);
-}
-GenerateContentList();
-</script>
-<style>
-#back-top {
-     position: fixed;
-     bottom: 10px;
-     right: 5px;
-     z-index: 99;
-}
-#back-top span {
-     width: 150px;
-     height: 174px;
-     display: block;
-     background:url(https://i.loli.net/2018/04/20/5ad9ad7857b27.png)no-repeat center center;
-}
-#back-top a{outline:none}
-</style>
-<script type="text/javascript">
-$(function() {
-    // hide #back-top first
-    $("#back-top").hide();
-    // fade in #back-top
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 500) {
-            $('#back-top').fadeIn();
-        } else {
-            $('#back-top').fadeOut();
-        }
-    });
-    // scroll body to 0px on click
-    $('#back-top a').click(function() {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
-});
-</script>
-<p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
-
-
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-
-    <title>Live2D</title>
-
-    <link rel="stylesheet" type="text/css" href="https://files.cnblogs.com/files/ECJTUACM-873284962/waifu.css"/>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
-    <link rel="stylesheet" type="text/css" href="https://files.cnblogs.com/files/ECJTUACM-873284962/waifu.css">
-	<div class="waifu" id="waifu">
-		<div class="waifu-tips" style="opacity: 1;"></div>
-		<canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-		<div class="waifu-tool">
-           <span class="fui-home"></span>
-           <span class="fui-chat"></span>
-          <span class="fui-heart"></span>
-          <span class="fui-user"></span>
-          <span class="fui-photo"></span>
-         <span class="fui-eye"></span>
-         <span class="fui-cross"></span>
-
-        </div>
-	</div>
-	<script src="https://files.cnblogs.com/files/ECJTUACM-873284962/live2d.js"></script>
-	<script src="https://files.cnblogs.com/files/ECJTUACM-873284962/waifu-tips.js"></script>
-	<script type="text/javascript">initModel()</script>
-
-<canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
-<script src="https://files.cnblogs.com/files/ECJTUACM-873284962/back-cartoon.js"></script>
-
-<script src="https://files.cnblogs.com/files/ECJTUACM-873284962/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://files.cnblogs.com/files/ECJTUACM-873284962/marvin.nav.css">
-<script type="text/javascript" src="https://files.cnblogs.com/files/ECJTUACM-873284962/marvic.nav.js"></script>
-</body>
-</html>
-<!--PageEndHtml Block End-->
-</body>
-</html>
-
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre class="prettyprint prettyprinted" style=""><span style="color: #008080;"><span class="pln"> </span><span class="lit">1</span></span><span class="pln"> </span><span class="com">#include</span><span class="pun">&lt;</span><span class="pln">bits</span><span class="pun">/</span><span class="pln">stdc</span><span class="pun">++.</span><span class="pln">h</span><span class="pun">&gt;</span><span class="pln">
+</span><span style="color: #008080;"><span class="pln"> </span><span class="lit">2</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">using</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">namespace</span></span><span style="color: #000000;"><span class="pln"> std</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="pln"> </span><span class="lit">3</span></span><span class="pln"> </span><span class="kwd">typedef</span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">long</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">long</span></span><span style="color: #000000;"><span class="pln"> ll</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="pln"> </span><span class="lit">4</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">const</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">int</span></span><span class="pln"> maxn</span><span class="pun">=</span><span class="lit">1e5</span><span class="pun">+</span><span style="color: #800080;"><span class="lit">5</span></span><span style="color: #000000;"><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="pln"> </span><span class="lit">5</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">const</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">int</span></span><span class="pln"> mod</span><span class="pun">=</span><span style="color: #800080;"><span class="lit">998244353</span></span><span style="color: #000000;"><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="pln"> </span><span class="lit">6</span></span><span class="pln"> ll fac</span><span class="pun">[</span><span class="pln">maxn</span><span class="pun">]={</span><span style="color: #800080;"><span class="lit">1</span></span><span style="color: #000000;"><span class="pun">};</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="pln"> </span><span class="lit">7</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">ll n</span><span class="pun">,</span><span class="pln">m</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="pln"> </span><span class="lit">8</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"><span class="pln"> init</span><span class="pun">()</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="pln"> </span><span class="lit">9</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">10</span></span><span class="pln">     </span><span style="color: #0000ff;"><span class="kwd">for</span></span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span class="pln"> i</span><span class="pun">=</span><span style="color: #800080;"><span class="lit">1</span></span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="pln">maxn</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++</span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">11</span></span><span class="pln">         fac</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]=</span><span class="pln">fac</span><span class="pun">[</span><span class="pln">i</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">1</span></span><span class="pun">]*</span><span class="pln">i</span><span class="pun">%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">12</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">13</span></span><span class="pln"> ll qmod</span><span class="pun">(</span><span class="pln">ll x</span><span class="pun">,</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span style="color: #000000;"><span class="pln"> q</span><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">14</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">15</span></span><span class="pln">     ll res</span><span class="pun">=</span><span style="color: #800080;"><span class="lit">1</span></span><span style="color: #000000;"><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">16</span></span><span class="pln">     </span><span style="color: #0000ff;"><span class="kwd">while</span></span><span style="color: #000000;"><span class="pun">(</span><span class="pln">q</span><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">17</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">    </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">18</span></span><span class="pln">         </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span class="pln">q</span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">19</span></span><span class="pln">             res</span><span class="pun">=</span><span class="pln">res</span><span class="pun">*</span><span class="pln">x</span><span class="pun">%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">20</span></span><span class="pln">         x</span><span class="pun">=</span><span class="pln">x</span><span class="pun">*</span><span class="pln">x</span><span class="pun">%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">21</span></span><span class="pln">         q</span><span class="pun">/=</span><span style="color: #800080;"><span class="lit">2</span></span><span style="color: #000000;"><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">22</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">    </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">23</span></span><span class="pln">     </span><span style="color: #0000ff;"><span class="kwd">return</span></span><span style="color: #000000;"><span class="pln"> res</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">24</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">25</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">int</span></span><span class="pln"> main</span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">void</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">26</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">27</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">    init</span><span class="pun">();</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">28</span></span><span class="pln">     </span><span style="color: #0000ff;"><span class="kwd">while</span></span><span class="pun">(~</span><span class="pln">scanf</span><span class="pun">(</span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #800000;"><span class="str">%lld%lld</span></span><span style="color: #800000;"><span class="str">"</span></span><span class="pun">,&amp;</span><span class="pln">n</span><span class="pun">,&amp;</span><span style="color: #000000;"><span class="pln">m</span><span class="pun">))</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">29</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">    </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">30</span></span><span class="pln">         </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span class="pln">m</span><span class="pun">&gt;</span><span style="color: #000000;"><span class="pln">n</span><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">31</span></span><span class="pln">             puts</span><span class="pun">(</span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #800000;"><span class="str">0</span></span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #000000;"><span class="pun">);</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">32</span></span><span class="pln">         </span><span style="color: #0000ff;"><span class="kwd">else</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span class="pln">n</span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">&amp;&amp;</span><span class="pln">m</span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">==</span><span style="color: #800080;"><span class="lit">0</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">33</span></span><span class="pln">             puts</span><span class="pun">(</span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #800000;"><span class="str">0</span></span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #000000;"><span class="pun">);</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">34</span></span><span class="pln">         </span><span style="color: #0000ff;"><span class="kwd">else</span></span><span class="pln"> </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span class="pln">n</span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">==</span><span style="color: #800080;"><span class="lit">0</span></span><span class="pun">&amp;&amp;</span><span class="pln">m</span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">35</span></span><span class="pln">             puts</span><span class="pun">(</span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #800000;"><span class="str">0</span></span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #000000;"><span class="pun">);</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">36</span></span><span class="pln">         </span><span style="color: #0000ff;"><span class="kwd">else</span></span><span class="pln">
+</span><span style="color: #008080;"><span class="lit">37</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">        </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">38</span></span><span class="pln">             ll fz</span><span class="pun">=</span><span class="pln">n</span><span class="pun">%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">39</span></span><span class="pln">             </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span class="pln">m</span><span class="pun">&gt;=</span><span style="color: #800080;"><span class="lit">1</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">40</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">            </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">41</span></span><span class="pln">                 </span><span style="color: #0000ff;"><span class="kwd">for</span></span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span class="pln"> i</span><span class="pun">=</span><span class="pln">n</span><span class="pun">-</span><span class="pln">m</span><span class="pun">+</span><span style="color: #800080;"><span class="lit">1</span></span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;=</span><span class="pln">n</span><span class="pun">+</span><span class="pln">m</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">1</span></span><span class="pun">;</span><span class="pln">i</span><span class="pun">++</span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">42</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">                </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">43</span></span><span class="pln">                     </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span class="pln">i</span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">==(</span><span class="pln">n</span><span class="pun">+</span><span class="pln">m</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">)%</span><span style="color: #800080;"><span class="lit">2</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">44</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">                    </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">45</span></span><span class="pln">                         fz</span><span class="pun">=</span><span class="pln">fz</span><span class="pun">*</span><span class="pln">i</span><span class="pun">%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">46</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">                    </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">47</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">                </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">48</span></span><span class="pln">                 ll tmp</span><span class="pun">=</span><span class="pln">fz</span><span class="pun">*</span><span class="pln">qmod</span><span class="pun">(</span><span class="pln">fac</span><span class="pun">[</span><span class="pln">m</span><span class="pun">],</span><span class="pln">mod</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">)%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">49</span></span><span class="pln">                 </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">((</span><span class="pln">n</span><span class="pun">-</span><span class="pln">m</span><span class="pun">)/</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">50</span></span><span class="pln">                     tmp</span><span class="pun">=-</span><span style="color: #000000;"><span class="pln">tmp</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">51</span></span><span class="pln">                 printf</span><span class="pun">(</span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #800000;"><span class="str">%lld\n</span></span><span style="color: #800000;"><span class="str">"</span></span><span class="pun">,(</span><span class="pln">tmp</span><span class="pun">+</span><span class="pln">mod</span><span class="pun">)%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">);</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">52</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">            </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">53</span></span><span class="pln">             </span><span style="color: #0000ff;"><span class="kwd">else</span></span><span class="pln">
+</span><span style="color: #008080;"><span class="lit">54</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">            </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">55</span></span><span class="pln">                 ll t</span><span class="pun">=</span><span style="color: #800080;"><span class="lit">1</span></span><span style="color: #000000;"><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">56</span></span><span class="pln">                 </span><span style="color: #0000ff;"><span class="kwd">for</span></span><span class="pun">(</span><span style="color: #0000ff;"><span class="kwd">int</span></span><span class="pln"> i</span><span class="pun">=</span><span class="pln">n</span><span class="pun">+</span><span class="pln">m</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">1</span></span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;=</span><span class="pln">n</span><span class="pun">-</span><span class="pln">m</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++</span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">57</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">                </span><span class="pun">{</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">58</span></span><span class="pln">                     </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">(</span><span class="pln">i</span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">==(</span><span class="pln">n</span><span class="pun">+</span><span class="pln">m</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">)%</span><span style="color: #800080;"><span class="lit">2</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">59</span></span><span class="pln">                         t</span><span class="pun">=</span><span class="pln">t</span><span class="pun">*</span><span class="pln">i</span><span class="pun">%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">60</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">                </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">61</span></span><span class="pln">                 ll tmp</span><span class="pun">=</span><span class="pln">fz</span><span class="pun">*</span><span class="pln">qmod</span><span class="pun">(</span><span class="pln">fac</span><span class="pun">[</span><span class="pln">m</span><span class="pun">],</span><span class="pln">mod</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">)%</span><span class="pln">mod</span><span class="pun">*</span><span class="pln">qmod</span><span class="pun">(</span><span class="pln">t</span><span class="pun">,</span><span class="pln"> mod</span><span class="pun">-</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">)%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">62</span></span><span class="pln">                 </span><span style="color: #0000ff;"><span class="kwd">if</span></span><span class="pun">((</span><span class="pln">n</span><span class="pun">-</span><span class="pln">m</span><span class="pun">)/</span><span style="color: #800080;"><span class="lit">2</span></span><span class="pun">%</span><span style="color: #800080;"><span class="lit">2</span></span><span style="color: #000000;"><span class="pun">)</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">63</span></span><span class="pln">                     tmp</span><span class="pun">=-</span><span style="color: #000000;"><span class="pln">tmp</span><span class="pun">;</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">64</span></span><span class="pln">                 printf</span><span class="pun">(</span><span style="color: #800000;"><span class="str">"</span></span><span style="color: #800000;"><span class="str">%lld\n</span></span><span style="color: #800000;"><span class="str">"</span></span><span class="pun">,(</span><span class="pln">tmp</span><span class="pun">+</span><span class="pln">mod</span><span class="pun">)%</span><span style="color: #000000;"><span class="pln">mod</span><span class="pun">);</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">65</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">            </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">66</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">        </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">67</span></span><span class="pln"> </span><span style="color: #000000;"><span class="pln">    </span><span class="pun">}</span><span class="pln">
+</span></span><span style="color: #008080;"><span class="lit">68</span></span><span class="pln"> </span><span class="pun">}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p></div>
