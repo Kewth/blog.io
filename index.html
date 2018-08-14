@@ -3,6 +3,8 @@ layout: page
 description: "博客页面"
 ---
 
+<div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com"></a></div>
+
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -39,5 +41,3 @@ description: "博客页面"
     {% endif %}
 </ul>
 {% endif %}
-
-<strong>Welcome! This is the </strong><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com" height=20 width=40></a><strong>th click!</strong>
