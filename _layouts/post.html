@@ -24,6 +24,7 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                     {% if page.description %}
+                    <hr class="small">
                     <span class="subheading">{{ page.description }}</span>
 					{% endif %}
                     <span class="meta">It Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
