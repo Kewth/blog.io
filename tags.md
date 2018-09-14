@@ -12,7 +12,7 @@ header-img: "img/semantic.jpg"
 3. 相关的文章会「唰」地一声跳到页面顶端
 4. 马上试试？
 
-**Tips: 较新的文章可能无法跳到页面顶端,而会出现在页面中间某处.**  
+<!-- **Tips: 较新的文章可能无法跳到页面顶端,而会出现在页面中间某处.**  -->
 
 ## 基因列表
 
@@ -26,7 +26,7 @@ header-img: "img/semantic.jpg"
 
 <ul class="listing">
 {% for tag in site.tags %}
-  <li class="listing-seperator" id="{{ tag[0] }}"><strong>{{ tag[0] }}</strong></li>
+  <li class="listing-seperator" id="{{ tag[0] }}"><strong>{{ tag[0] }} :</strong></li>
 {% for post in tag[1] %}
   <li class="listing-item">
   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -65,7 +65,7 @@ header-img: "img/semantic.jpg"
 <br/>
 <br/>
 <br/>
-<br/>
+<center>感谢使用!</center>
 
 
 <script src="/media/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
