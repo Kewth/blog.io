@@ -5,6 +5,7 @@ tagline: "cn"
 description: "This is a blog to say hello world."  # 一句话描述你的博客
 baseurl: "" # 地址
 url: "http://kewth.github.io"  # 此处填写你的博客地址 
+gems: [jekyll-paginate] # 预览
 
 # About/contact
 owner: 
