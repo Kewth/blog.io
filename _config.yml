@@ -27,7 +27,11 @@ luogu_usernameid: 52232
 # Build settings  
 # use Github Flavored Markdown !important  
 # document: http://jekyllrb.com/docs/configuration/#kramdown  
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+    extensions: [ "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
+# markdown: rdiscount
+# markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 8
