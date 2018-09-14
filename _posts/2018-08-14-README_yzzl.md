@@ -3,7 +3,7 @@ layout: post
 title: About-YZZL
 date: 2018-8-14
 categories: blog
-tags: [YZZL,README]
+tags: [YZZL]
 description: 这里是YZZL
 ---
 
