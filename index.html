@@ -3,12 +3,13 @@ layout: page
 description: "Maybe Kewth's blog?"
 ---
 
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 
 <strong>目录:</strong>
 <ul>
 	<li><a href="#jsq_only">计数器</a></li>
+	<li><a href="#get_name">权限</a></li>
 	<li><a href="#blog_begin">文章</a></li>
 </ul>
 
@@ -16,10 +17,10 @@ description: "Maybe Kewth's blog?"
 
 
 
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 
-<div align="center">
+<div align="center" id="jsq_only">
 	<p>这是一个mini计数器</p>
 </div>
 <div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com"></a></div>
@@ -28,7 +29,29 @@ description: "Maybe Kewth's blog?"
 
 
 
-
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<strong>─────────────────────────────────────────────────</strong>
+<p>输入权限名:</p>
+<input id="get_name_of_Quan" type="text" />
+<button type="button" onclick="get_name_of_Quan()">权限页面跳转</button>
+<script>
+function get_name_of_Quan()
+{
+	var x_get_name = document.getElementById("get_name_of_Quan");
+	if (x_get_name.value=="Kewth")
+	{
+		location.href='/Quan/Kewth/';
+	}
+	else if (x_get_name.value=="Debug")
+	{
+		location.href='/Quan/Debug/';
+	}
+	else 
+	{
+		alert("没有此权限名!");
+	}
+}
+</script>
 
 <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
