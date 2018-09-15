@@ -33,18 +33,38 @@ description: "Maybe Kewth's blog?"
 <strong>─────────────────────────────────────────────────</strong>
 <p>输入权限名:</p>
 <input id="get_name_of_Quan" type="text" />
-<button type="button" onclick="get_name_of_Quan()">权限页面跳转</button>
+<button type="button" onclick="get_name_of_Quan()" class="btn-info">权限页面跳转</button>
+
+<p id="Quan_name"></p>
+<button onclick="see_Quan_name()" type="button" class="btn btn-block btn-info" id="to_see_Quan_name">查看权限</button>
+
 <script>
+function see_Quan_name()
+{
+	var x_Quan_name = document.getElementById("Quan_name");
+	if(x_Quan_name.innerHTML=="")
+	{
+		x_Quan_name.innerHTML="当前权限:"+getCookie('Quan_name');
+		document.getElementById("to_see_Quan_name").innerHTML="隐藏权限";
+	}
+	else
+	{
+		x_Quan_name.innerHTML="";
+		document.getElementById("to_see_Quan_name").innerHTML="查看权限";
+	}
+}
 function get_name_of_Quan()
 {
 	var x_get_name = document.getElementById("get_name_of_Quan");
-	if (x_get_name.value=="Kewth")
+	var st=x_get_name.value;
+	if(st=="" && getCookie("Quan_name")!="null" && getCookie("Quan_name")!="")
 	{
-		location.href='/Quan/Kewth/';
+		location.href='/Quan/'+getCookie('Quan_name')+'/';
 	}
-	else if (x_get_name.value=="Debug")
+	else if(st=="Kewth" || st=="Debug")
 	{
-		location.href='/Quan/Debug/';
+		setCookie('Quan_name',st,'d1');
+		location.href='/Quan/'+st+'/';
 	}
 	else 
 	{
