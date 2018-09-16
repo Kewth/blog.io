@@ -1,12 +1,12 @@
 ---
 layout: page
-description: "Maybe Kewth's blog?"
+description: Maybe Kewth's blog?
+header-img: img/HY_zly.jpg
 ---
 
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-
-<strong>目录:</strong>
+<p><strong>目录:</strong></p>
 <ul>
 	<li><a href="#jsq_only">计数器</a></li>
 	<li><a href="#get_name">权限</a></li>
@@ -31,6 +31,7 @@ description: "Maybe Kewth's blog?"
 
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
+
 <p>输入权限名:</p>
 <input id="get_name_of_Quan" type="text" />
 <button type="button" onclick="get_name_of_Quan()" class="btn-info">权限页面跳转</button>
@@ -75,8 +76,7 @@ function get_name_of_Quan()
 
 <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-
-<a name="blog_begin"><strong>下面是华丽的文章:</strong></a>
+<a name="blog_begin"><p><strong>下面是华丽的文章:</strong></p></a>
 
 <!-- don't zai zhe xia mian do anything --> 
 {% for post in paginator.posts %}
