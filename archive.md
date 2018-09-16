@@ -8,7 +8,7 @@ header-img: "img/orange.jpg"
 一堆乱七八糟的东西
 
 找不到想要的文章?  
-试试**[TAGS](https://kewth.github.io/tags/)**  
+试试**[TAGS](/tags/)**  
 
 <ul class="listing">
 {% for post in site.posts %}
@@ -24,7 +24,7 @@ header-img: "img/orange.jpg"
   {% endif %}
   <li class="listing-item">
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    <a href="{{ post.url }}" title="{{ post.title }}"><font color='black'>{{ post.title }}</font></a>
   </li>
 {% endfor %}
 </ul>
