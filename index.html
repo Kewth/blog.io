@@ -9,7 +9,7 @@ header-img: img/HY_zly.jpg
 <p><strong>目录:</strong></p>
 <ul>
 	<li><a href="#jsq_only">计数器</a></li>
-	<li><a href="#get_name">权限</a></li>
+	<li><a href="#get_name_of_Quan">权限</a></li>
 	<li><a href="#blog_begin">文章</a></li>
 </ul>
 
@@ -58,9 +58,12 @@ function get_name_of_Quan()
 {
 	var x_get_name = document.getElementById("get_name_of_Quan");
 	var st=x_get_name.value;
-	if(st=="" && getCookie("Quan_name")!="null" && getCookie("Quan_name")!="")
+	if(st=="")
 	{
-		location.href='/Quan/'+getCookie('Quan_name')+'/';
+		if(getCookie("Quan_name")!=null)
+			location.href='/Quan/'+getCookie('Quan_name')+'/';
+		else 
+			location.href='/Quan/NULL/';
 	}
 	else if(st=="Kewth" || st=="Debug")
 	{
