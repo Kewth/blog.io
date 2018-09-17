@@ -149,14 +149,15 @@ layout: default
 <div id="gitalk-container"></div>
 <script>
 var gitalk = new Gitalk({
-                clientID: '10b0a3f27e4940400c7d', ///步骤3创建后得到的
-                clientSecret: 'd5351d94791344f0835a735ce54f9222e0510922',///步骤3创建后得到的
-                repo: 'for_blog',///步骤4创建的库名
-                owner: 'Kewth',//自己的GitHub用户名
-                admin: ['Kewth'],//自己的GitHub用户名
-				id: {{ page.id }} , // 唯一标示，一般是文章id也可以是文章url
-                distractionFreeMode: false  // Facebook-like distraction free mode
-            })
+	clientID: '10b0a3f27e4940400c7d', ///步骤3创建后得到的
+	clientSecret: 'd5351d94791344f0835a735ce54f9222e0510922',///步骤3创建后得到的
+	repo: 'for_blog',///步骤4创建的库名
+	owner: 'Kewth',//自己的GitHub用户名
+	admin: ['Kewth'],//自己的GitHub用户名
+	// id: {{ page.id }} , // 唯一标示，一般是文章id也可以是文章url
+	id: location.href,
+	distractionFreeMode: false  // Facebook-like distraction free mode
+})
 
 gitalk.render('gitalk-container')
 </script>
