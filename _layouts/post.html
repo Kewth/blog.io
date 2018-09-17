@@ -122,6 +122,7 @@ layout: default
 <!-- gitment.render('container') -->
 <!-- </script> -->
 
+
 <!-- 来必力City版安装代码 -->
 <!-- <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTc4OC8xNjMxNQ=="> -->
 <!-- 	<script type="text/javascript"> -->
@@ -141,6 +142,7 @@ layout: default
 <!-- </div> -->
 <!-- City版安装代码已完成 -->
 
+
 <!-- Git talk -->
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
@@ -152,7 +154,7 @@ var gitalk = new Gitalk({
                 repo: 'for_blog',///步骤4创建的库名
                 owner: 'Kewth',//自己的GitHub用户名
                 admin: ['Kewth'],//自己的GitHub用户名
-                id: location.pathname, // 唯一标示，一般是文章id也可以是文章url
+				id: {{ page.title }} , // 唯一标示，一般是文章id也可以是文章url
                 distractionFreeMode: false  // Facebook-like distraction free mode
             })
 
