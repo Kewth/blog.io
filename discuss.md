@@ -6,7 +6,7 @@ description: For Discuss
 header-img: "img/HY_zly.jpg"
 ---
 
-如果你有[github](www.github.com)的账号的话,那恭喜你,你可以使用本博客的Gitalk功能!!  
+如果你有[github](https://github.com/)话,那恭喜你,你可以使用本博客的Gitalk功能!!  
 
 有什么想说的就都发在下面的评论吧!  
 

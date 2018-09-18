@@ -37,6 +37,7 @@ redcarpet:
 highlighter: rouge
 permalink: pretty
 paginate: 8
+paginate_path: "page:num"
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -68,3 +69,4 @@ google_verify:
 bing_verify:
 
 # Links to include in footer navigation
+# NULL

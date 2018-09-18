@@ -8,9 +8,11 @@ header-img: img/HY_zly.jpg
 <strong>─────────────────────────────────────────────────</strong>
 <p><strong>目录:</strong></p>
 <ul>
+	<li><a href="/help">寻求帮助</a></li>
 	<li><a href="#jsq_only">计数器</a></li>
 	<li><a href="#get_name_of_Quan">权限</a></li>
 	<li><a href="#blog_begin">文章</a></li>
+	<!-- <li><a href="/purely">纯文章模式</a></li> -->
 </ul>
 
 
@@ -111,6 +113,21 @@ function get_name_of_Quan()
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+	<!-- <span class="active">{{ page }}</span> -->
+    {% elsif page == 1 %}
+    <li class="mid">
+		<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+	</li>
+    {% else %}
+    <li class="mid">
+		<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	</li>
+    {% endif %}
+	{% endfor %}
+
     {% if paginator.next_page %}
     <li class="next">
         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
