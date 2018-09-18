@@ -38,7 +38,9 @@ highlighter: rouge
 permalink: pretty
 paginate: 8
 paginate_path: "page:num"
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"] # jekyll 忽略的文件
+include: [] # jekyll 强制处理的文件 
+encoding: utf-8
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: Asia/Changsha
@@ -56,7 +58,7 @@ defaults:
 
 # Comments 
 comments :
-  provider : disqus # 使用 disqus 评论模块，读者翻墙才能看见
+  provider : # disqus # 使用 disqus 评论模块，读者翻墙才能看见
   duoshuo :
     short_name :  # 填写你的 disqus id
   disqus :

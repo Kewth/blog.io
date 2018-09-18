@@ -14,7 +14,7 @@ layout: default
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <div class="Tags">
-						<a href="https://kewth.github.io/tags/">Tags: </a>
+						<a href="/tags/">Tags: </a>
                         {% for tag in page.tags %}
                         <a class="tag" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
                         {% endfor %}
@@ -156,7 +156,8 @@ var gitalk = new Gitalk({
 	admin: ['Kewth'],//自己的GitHub用户名
 	id: '{{ page.title }}', // 唯一标示，一般是文章id也可以是文章url
 	// id: location.href,
-	distractionFreeMode: false  // Facebook-like distraction free mode
+	// pagerDirection: first, // 时间正序排序
+	distractionFreeMode: false,  // Facebook-like distraction free mode
 })
 
 gitalk.render('gitalk-container')
