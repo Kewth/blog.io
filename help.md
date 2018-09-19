@@ -28,5 +28,6 @@ header-img: img/green.jpg
 [主页](/#blog_begin)以分页的形式列出了所有文章.  
 想一览所有文章的话,[archive](/archive)这个Page按时间在同一页面列出了所有文章.  
 如果你有[github](https://github.com/)的账号的话,每篇文章下可以进行评论.  
+**值得注意的是**,Gitalk有时会'error : no acces token'.  
 
 ~~就是这样~~  
