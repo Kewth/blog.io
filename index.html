@@ -4,6 +4,7 @@ description: Maybe Kewth's blog?
 header-img: img/HY_zly.jpg
 ---
 
+<div id="MORE">
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <p><strong>目录:</strong></p>
@@ -13,6 +14,7 @@ header-img: img/HY_zly.jpg
 	<li><a href="#get_name_of_Quan">权限</a></li>
 	<li><a href="#blog_begin">文章</a></li>
 	<!-- <li><a href="/purely">纯文章模式</a></li> -->
+	<li><button onclick="Wen_only()">纯文章模式</button></li>
 </ul>
 
 
@@ -40,6 +42,7 @@ header-img: img/HY_zly.jpg
 
 <p id="Quan_name"></p>
 <button onclick="see_Quan_name()" type="button" class="btn btn-block btn-info" id="to_see_Quan_name">查看权限</button>
+</div>
 
 <script>
 function see_Quan_name()
@@ -77,11 +80,17 @@ function get_name_of_Quan()
 		alert("没有此权限名!");
 	}
 }
+function Wen_only()
+{
+	var line1="<strong><p>当前为纯文章模式<\/p><\/strong>";
+	var line2="<a href='/'>点此进入正常模式<\/a>";
+	document.getElementById("MORE").innerHTML = line1 + line2;
+}
 </script>
 
 <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-<a name="blog_begin"><p><strong>下面是华丽的文章:</strong></p></a>
+<div id="blog_begin"><p><strong>下面是华丽的文章:</strong></p></div>
 
 <!-- don't zai zhe xia mian do anything --> 
 {% for post in paginator.posts %}
