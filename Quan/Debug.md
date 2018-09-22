@@ -49,3 +49,25 @@ function see_Quan_name()
 <button onclick="alert(document.cookie)" type="button" class="btn btn-block btn-info">Cookies</button>
 
 <a href="/Files/Y" download="Y">下载</a>
+
+<script type="text/javascript" language=JavaScript charset="UTF-8">
+document.onkeydown=function(event){
+	var e = event || window.event || arguments.callee.caller.arguments[0];
+	if(e && e.keyCode==38)
+	{
+		alert('Up');
+	}
+	if(e && e.keyCode==39)
+	{
+		alert('Right');
+	}
+	if(e && e.keyCode==40)
+	{
+		alert('Down');
+	}
+	if(e && e.keyCode==37)
+	{
+		alert('Left');
+	}
+}; 
+</script>
