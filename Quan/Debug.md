@@ -52,7 +52,7 @@ function see_Quan_name()
 
 <p id="Key_code">当前按键</p>
 <script type="text/javascript" language=JavaScript charset="UTF-8">
-document.onkeydown=function(event)
+function For_KeyCode(event)
 {
 	var e = event || window.event || arguments.callee.caller.arguments[0];
 	if(e && e.keyCode==38)

@@ -28,4 +28,5 @@ document.onkeydown=function(event)
 		else
 			click_g = false;
 	}
+	For_KeyCode(event);
 }; 
