@@ -12,7 +12,12 @@ document.onkeydown=function(event)
 			location.href = '/';
 		if(e.keyCode==71)
 		{
-			if(click_g)
+			if(e.shiftKey)
+			{
+				location.href = '#bottom';
+				click_g = false;
+			}
+			else if(click_g)
 			{
 				location.href = '#top';
 				click_g = false;
