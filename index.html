@@ -45,6 +45,19 @@ header-img: img/HY_zly.jpg
 </div>
 
 <script>
+window.onload=function()
+{
+	if(getCookie("Long_Time_No_See") == null)
+	{
+		alert('long time no see');
+		setCookie("Long_Time_No_See","true",'m1');
+		document.write("<p>很久没有,或者第一次访问这个博客的主页吧<\/p>");
+		document.write("<p>先了解一下,获取帮助?<\/p>");
+		document.write("<p>将在3秒后自动跳转到帮助页面<\/p>");
+		document.write("<a href='/'>你也可以点这直接访问主页<\/a>");
+		setTimeout(function() {location.href = '/help/';} , "3000");
+	}
+}
 function see_Quan_name()
 {
 	var x_Quan_name = document.getElementById("Quan_name");
