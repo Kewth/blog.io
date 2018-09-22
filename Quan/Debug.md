@@ -50,8 +50,10 @@ function see_Quan_name()
 
 <a href="/Files/Y" download="Y">下载</a>
 
+<p id="Key_code">当前按键</p>
 <script type="text/javascript" language=JavaScript charset="UTF-8">
-document.onkeydown=function(event){
+document.onkeydown=function(event)
+{
 	var e = event || window.event || arguments.callee.caller.arguments[0];
 	if(e && e.keyCode==38)
 	{
@@ -68,6 +70,11 @@ document.onkeydown=function(event){
 	if(e && e.keyCode==37)
 	{
 		alert('Left');
+	}
+
+	if(e)
+	{
+		document.getElementById("Key_code").innerHTML="当前按键keycode:"+e.keyCode;
 	}
 }; 
 </script>
