@@ -59,17 +59,21 @@ document.onkeydown=function(event)
 	{
 		alert('Up');
 	}
-	if(e && e.keyCode==39)
+	if(e && e.shiftKey && e.keyCode==71)
 	{
-		alert('Right');
+		alert('G');
 	}
-	if(e && e.keyCode==40)
+	if(e && e.ctrlKey && e.keyCode==71)
 	{
-		alert('Down');
+		alert('ctrl-g');
 	}
-	if(e && e.keyCode==37)
+	if(e && e.metaKey && e.keyCode==71)
 	{
-		alert('Left');
+		alert('met-g');
+	}
+	if(e && e.altKey && e.keyCode==71)
+	{
+		alert('alt-g');
 	}
 
 	if(e)
