@@ -46,6 +46,7 @@ function see_Quan_name()
 <p id="Quan_name"></p>
 <button onclick="see_Quan_name()" type="button" class="btn btn-block btn-info">查看权限</button>
 <button onclick="delCookie('Quan_name')" type="button" class="btn btn-block btn-info">删除权限</button>
+<button onclick="delCookie('Long_Time_No_See')" type="button" class="btn btn-block btn-info">删除初始</button>
 <button onclick="alert(document.cookie)" type="button" class="btn btn-block btn-info">Cookies</button>
 
 <a href="/Files/Y" download="Y">下载</a>
@@ -62,6 +63,7 @@ function For_KeyCode(event)
 	if(e && e.shiftKey && e.keyCode==71)
 	{
 		alert('G');
+		// document.write('<p>You click the G</p>');
 	}
 	if(e && e.ctrlKey && e.keyCode==71)
 	{
