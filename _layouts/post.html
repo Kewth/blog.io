@@ -42,8 +42,22 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
+				{% if page.hide %}
+				<p>很抱歉,本文暂时没有写完</p>
+				<p>如有意见或建议或者想催稿什么的,请按G在下方评论留言或在
+				<a href="/discuss">讨论区</a>
+				发表讨论
+				</p>
+				<p>开头概要:</p>
+				<div class="post-content-preview">
+					<strong>
+					{{ content | strip_html | truncate:300 }}
+					</strong>
+				</div>
+				<p>敬请谅解</p>
+				{% else %}
                 {{ content }}
-
+				{% endif %}
                 <hr>
 
                 <ul class="pager">
