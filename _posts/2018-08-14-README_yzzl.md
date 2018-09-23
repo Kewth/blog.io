@@ -4,7 +4,6 @@ title: About-YZZL
 date: 2018-8-14
 categories: blog
 tags: [YZZL]
-id: 2
 description: 这里是YZZL
 ---
 

@@ -15,7 +15,7 @@ You must know Kewth , so why do you ask?
 In short , he's a great person!   
 
 #### History:  
-- 2018-09-23: 文章支持直接使用 $L_{ate}x$.  
+- 2018-09-23: 文章支持直接使用 $Latex$.  
 - 2018-09-17: 使用[gitalk](/discuss)作为博客的评论系统.  
 - 2018-08-19: 设置网站背景以及图标.  
 - 2018-08-13: 成功搭建博客,并发表[nice大夫](/blog/2018/08/13/want-to-try).  

@@ -4,7 +4,6 @@ title: nice 大夫
 date: 2018-8-13
 categories: blog
 tags: [try]
-id: 1
 description: Hello world
 ---
 
