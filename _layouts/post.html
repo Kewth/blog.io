@@ -56,10 +56,6 @@ layout: default
 				</div>
 				<p>敬请谅解</p>
 				{% else %}
-				{% capture time %}{{ content | reading_time }}{% endcapture %}
-				<p><strong>
-					Maybe it'll take you {{ time }} {% if time == '1' %}minute{% else %}minutes{% endif %} to read.(about {{ content | count_words }} words)
-				</strong></p>
                 {{ content }}
 				{% endif %}
                 <hr>
