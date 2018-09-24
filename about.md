@@ -15,6 +15,7 @@ You must know Kewth , so why do you ask?
 In short , he's a great person!   
 
 #### History:  
+- 2018-09-24: 添加文章搜索框.  
 - 2018-09-23: 文章数量达到20篇.  
 - 2018-09-22: 添加长期未访问博客的自动帮助引导.  
 - 2018-09-23: 文章支持直接使用 $Latex$.  
