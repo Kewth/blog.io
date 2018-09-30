@@ -1,6 +1,6 @@
 ---
 layout: page
-titlle: 文章
+title: 文章
 subtitle: Archive
 description: 文章归档
 header-img: img/orange.jpg
@@ -9,7 +9,7 @@ header-img: img/orange.jpg
 一堆乱七八糟的东西
 
 找不到想要的文章?  
-试试**[TAGS](/tags/)**  
+建议试试**[TAGS](/tags/)**  
 
 <ul class="listing">
 {% for post in site.posts %}
