@@ -143,11 +143,11 @@ function Wen_only()
 	<!-- <span class="active">{{ page }}</span> -->
     {% elsif page == 1 %}
     <li class="mid">
-		<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+		<a href="/">{{ page }}</a>
 	</li>
     {% else %}
     <li class="mid">
-		<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+		<a href="/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
 	</li>
     {% endif %}
 	{% endfor %}
