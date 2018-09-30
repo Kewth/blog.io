@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 标签
-subtitle: Tags
+title: Tags
+chtitle: 标签
 description: 哈哈，你找到了我的文章基因库  
 header-img: img/semantic.jpg  
 ---

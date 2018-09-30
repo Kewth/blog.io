@@ -1,8 +1,8 @@
 ---
 gitalk: true
 layout: page
-title: 讨论
-subtitle: Discuss
+chtitle: 讨论
+title: Discuss
 description: For Discuss
 header-img: img/HY_zly.jpg
 ---

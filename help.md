@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 帮助
-subtitle: help
+chtitle: 帮助
+title: help
 description: First visit there?
 header-img: img/green.jpg
 ---

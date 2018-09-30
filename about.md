@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 关于
-subtitle: about
+chtitle: 关于
+title: about
 description: About this kewth's blog
 header-img: img/green.jpg
 ---

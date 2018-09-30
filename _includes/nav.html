@@ -19,11 +19,11 @@
                 <!--     <a href="{{ site.baseurl }}/">Home</a> -->
                 <!-- </li> -->
 				{% for page in site.pages %}
-					{% if page.title %}
+					{% if page.chtitle %}
 						{% if page.hide %}
 						{% else %}
 						<li>
-							<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+							<a href="{{ page.url | prepend: site.baseurl }}">{{ page.chtitle }}</a>
 						</li>
 						{% endif %}
 					{% endif %}

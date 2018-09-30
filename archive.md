@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 文章
-subtitle: Archive
+chtitle: 文章
+title: Archive
 description: 文章归档
 header-img: img/orange.jpg
 ---
