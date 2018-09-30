@@ -1,9 +1,10 @@
 ---
 gitalk: true
 layout: page
-title: Discuss
+title: 讨论
+subtitle: Discuss
 description: For Discuss
-header-img: "img/HY_zly.jpg"
+header-img: img/HY_zly.jpg
 ---
 
 如果你有[github](https://github.com/)话,那恭喜你,你可以使用本博客的Gitalk功能!!  

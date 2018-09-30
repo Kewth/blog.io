@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "Archive"
-description: "文章归档"
-header-img: "img/orange.jpg"
+titlle: 文章
+subtitle: Archive
+description: 文章归档
+header-img: img/orange.jpg
 ---
 
 一堆乱七八糟的东西

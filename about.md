@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "About"
-description: "This kewth's blog " 
-header-img: "img/green.jpg"
+title: 关于
+subtitle: about
+description: About this kewth's blog
+header-img: img/green.jpg
 ---
 
 这是一个叫Kewth的蒟蒻的辣鸡网站   
