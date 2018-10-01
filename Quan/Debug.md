@@ -84,3 +84,15 @@ function For_KeyCode(event)
 	}
 }; 
 </script>
+
+
+
+<div class="btn-group">
+      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">按钮下拉菜单<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+          <li><a href="##">按钮下拉菜单项</a></li>
+          <li><a href="##">按钮下拉菜单项</a></li>
+          <li><a href="##">按钮下拉菜单项</a></li>
+          <li><a href="##">按钮下拉菜单项</a></li>
+      </ul>
+</div>
