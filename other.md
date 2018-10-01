@@ -17,7 +17,8 @@ header-img: img/green.jpg
 <p><a href="#" onclick="creadiv(400,500,'哈哈哈')">再点一下</a></p>
 
 <script language="javascript">
-function creadiv(l,r,t){ //l是距左的距离,r是距右的距离,t是要显示的文本内容
+function creadiv(l,r,t)
+{ //l是距左的距离,r是距右的距离,t是要显示的文本内容
 var dd=document.createElement("div");
 dd.style.position="absolute";
 dd.style.left=l+"px";
@@ -25,4 +26,5 @@ dd.style.right=r+"px"
 dd.innerText=t;
 document.body.appendChild(dd);
 }
+creadiv(100,100,'asDSAD');
 </script>
