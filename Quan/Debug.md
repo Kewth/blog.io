@@ -52,7 +52,7 @@ function see_Quan_name()
 <a href="/Files/Y" download="Y">下载</a>
 
 <p id="Key_code">当前按键</p>
-<script type="text/javascript" language=JavaScript charset="UTF-8">
+<script>
 function For_KeyCode(event)
 {
 	var e = event || window.event || arguments.callee.caller.arguments[0];
@@ -82,7 +82,7 @@ function For_KeyCode(event)
 	{
 		document.getElementById("Key_code").innerHTML="当前按键keycode:"+e.keyCode;
 	}
-}; 
+}
 </script>
 
 
