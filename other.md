@@ -12,10 +12,6 @@ header-img: img/green.jpg
 **YZZL**  
 [2.0](/blog/2018/08/26/YZZL_new2.0/)  
 
-
-<p><a href="#" onclick="creadiv(1,1,'Hello你好')">点一下我</a></p>
-<p><a href="#" onclick="creadiv(101,101,'哈哈哈')">再点一下</a></p>
-
 <script language="javascript">
 function creadiv(l,r,t)
 { //l是距左的距离,r是距右的距离,t是要显示的文本内容
@@ -26,5 +22,4 @@ dd.style.right=r+"px"
 dd.innerText=t;
 document.body.appendChild(dd);
 }
-creadiv(100,100,'asDSAD');
 </script>
