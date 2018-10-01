@@ -13,8 +13,8 @@ header-img: img/green.jpg
 [2.0](/blog/2018/08/26/YZZL_new2.0/)  
 
 
-<p><a href="#" onclick="creadiv(100,100,'Hello你好')">点一下我</a></p>
-<p><a href="#" onclick="creadiv(400,500,'哈哈哈')">再点一下</a></p>
+<p><a href="#" onclick="creadiv(1,1,'Hello你好')">点一下我</a></p>
+<p><a href="#" onclick="creadiv(101,101,'哈哈哈')">再点一下</a></p>
 
 <script language="javascript">
 function creadiv(l,r,t)
