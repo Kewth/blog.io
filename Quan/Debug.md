@@ -85,25 +85,17 @@ function For_KeyCode(event)
 }
 </script>
 
-
-
-<div class="btn-group">
-      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">按钮下拉菜单<span class="caret"></span></button>
-      <ul class="dropdown-menu">
-          <li><a href="##">按钮下拉菜单项</a></li>
-          <li><a href="##">按钮下拉菜单项</a></li>
-          <li><a href="##">按钮下拉菜单项</a></li>
-          <li><a href="##">按钮下拉菜单项</a></li>
-      </ul>
-</div>
-
 <div class="wrap">
 <p class="content" id="content">一言测试</p>
+<p class="content2" id="content2">一言测试</p>
 <!-- 这里是 JS 输出的“一言”句子 -->
 </div>
 <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.min.js"></script>
 <script>
 $.post("https://sslapi.hitokoto.cn/", function(hitokoto) {
-		$(".content").html(hitokoto);
+		$(".content").html(hitokoto.hitokoto);
+		});
+$.getJSON("https://sslapi.hitokoto.cn/", function(hitokoto) {
+		$(".content2").html(hitokoto.hitokoto);
 		});
 </script>
