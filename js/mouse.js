@@ -71,9 +71,9 @@ onload = function() {
             case 55:
                 $elem.innerText = "(ꐦ°᷄д°᷅)";
                 break;
-            case tot_rd:
-                click_cnt = 0;
             default:
+				if(click_cnt >= tot_rd)
+					click_cnt = 0;
                 $elem.innerText = "❤";
                 break;
         }
