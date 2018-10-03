@@ -162,7 +162,7 @@ fetch('https://v1.hitokoto.cn')
 			function (data)
 			{
 				var hitokoto = document.getElementById('hitokoto');
-				hitokoto.innerHTML = '一句骚话:<stong>' + data.hitokoto + '</stong>';
+				hitokoto.innerHTML = '一句骚话:<strong>' + data.hitokoto + '</strong>';
 				hitokoto_from.innerHTML = '<i>--' + data.from + '</i>';
 			}
 		 )
