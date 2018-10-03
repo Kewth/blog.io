@@ -13,47 +13,71 @@ onload = function() {
         $elem.style.left = (x - 10) + "px";
         $elem.style.top = (y - 20) + "px";
         clearInterval(anim);
+		var tot_rd = 60;
         switch (++click_cnt) {
-            case 10:
+			case 1:
+				$elem.innerHTML = "This";
+				break;
+			case 2:
+				$elem.innerHTML = "is";
+				break;
+			case 3:
+				$elem.innerHTML = "Kewth's";
+				break;
+			case 4:
+				$elem.innerHTML = "Bolg!!!";
+				break;
+            case 5:
                 $elem.innerText = "OωO";
+				click_cnt = Math.random() * tot_rd;
+                break;
+            case 10:
+                $elem.innerText = "(๑•́ ∀ •̀๑)";
+				click_cnt = Math.random() * tot_rd;
+                break;
+            case 15:
+                $elem.innerText = "(๑•́ ₃ •̀๑)";
+				click_cnt = Math.random() * tot_rd;
                 break;
             case 20:
-                $elem.innerText = "(๑•́ ∀ •̀๑)";
+                $elem.innerText = "(๑•̀_•́๑)";
+				click_cnt = Math.random() * tot_rd;
+                break;
+            case 25:
+                $elem.innerText = "（￣へ￣）";
+				click_cnt = Math.random() * tot_rd;
                 break;
             case 30:
-                $elem.innerText = "(๑•́ ₃ •̀๑)";
+                $elem.innerText = "(╯°口°)╯(┴—┴";
+				click_cnt = Math.random() * tot_rd;
+                break;
+            case 35:
+                $elem.innerText = "૮( ᵒ̌皿ᵒ̌ )ა";
+				click_cnt = Math.random() * tot_rd;
                 break;
             case 40:
-                $elem.innerText = "(๑•̀_•́๑)";
+                $elem.innerText = "╮(｡>口<｡)╭";
+				click_cnt = Math.random() * tot_rd;
+                break;
+            case 45:
+                $elem.innerText = "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";
+				click_cnt = Math.random() * tot_rd;
                 break;
             case 50:
-                $elem.innerText = "（￣へ￣）";
-                break;
-            case 60:
-                $elem.innerText = "(╯°口°)╯(┴—┴";
-                break;
-            case 70:
-                $elem.innerText = "૮( ᵒ̌皿ᵒ̌ )ა";
-                break;
-            case 80:
-                $elem.innerText = "╮(｡>口<｡)╭";
-                break;
-            case 90:
-                $elem.innerText = "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";
-                break;
-            case 100:
-            case 101:
-            case 102:
-            case 103:
-            case 104:
-            case 105:
+            case 51:
+            case 52:
+            case 53:
+            case 54:
+            case 55:
                 $elem.innerText = "(ꐦ°᷄д°᷅)";
                 break;
+            case tot_rd:
+                click_cnt = 0;
             default:
                 $elem.innerText = "❤";
                 break;
         }
-        $elem.style.fontSize = Math.random() * 10 + 8 + "px";
+        $elem.style.fontSize = Math.random() * 18 + 6 + "px";
         var increase = 0;
         var anim;
         setTimeout(function() {
