@@ -73,8 +73,11 @@ onload = function() {
                 break;
             default:
 				if(click_cnt >= tot_rd)
+				{	
 					click_cnt = 0;
-                $elem.innerText = "❤x" + click_cnt;
+					$elem.innerText = "❤❤❤";
+				}
+                $elem.innerText = "❤x" + Math.floor(click_cnt);
                 break;
         }
         $elem.style.fontSize = Math.random() * 18 + 6 + "px";
