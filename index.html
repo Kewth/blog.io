@@ -16,40 +16,83 @@ header-img: img/HY_zly.jpg
 	<li><a href="#blog_begin">文章</a></li>
 	<li><a onclick="Wen_only()">纯文章模式</a></li>
 </ul>
-
-
-
-
-
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-
 <div align="center" id="jsq_only">
 	<p>这是一个mini计数器</p>
 </div>
 <div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com"></a></div>
-
 <div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225856&c=9677881" alt="AmazingCounters.com"></a></div>
-
-
-
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-
 <p>输入权限名:</p>
 <input id="get_name_of_Quan" type="text" />
 <button type="button" onclick="get_name_of_Quan()" class="btn-info">权限页面跳转</button>
-
 <p id="Quan_name"></p>
 <button onclick="see_Quan_name()" type="button" class="btn btn-block btn-info" id="to_see_Quan_name">查看权限</button>
-
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <p id="hitokoto">正在选取骚话...嗯?莫非这个浏览器不支持骚话?</p>
-
 <!-- end of more -->
 </div>
 
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<strong>─────────────────────────────────────────────────</strong>
+<div id="blog_begin"><p><strong>下面是华丽的文章:</strong></p></div>
+<!-- don't zai zhe xia mian do anything --> 
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">            
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {{ post.content | strip_html | truncate:150 }}
+        </div>
+    </a>
+    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+</div>
+
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+	<!-- <span class="active">{{ page }}</span> -->
+    {% elsif page == 1 %}
+    <li class="mid">
+		<a href="/">{{ page }}</a>
+	</li>
+    {% else %}
+    <li class="mid">
+		<a href="/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	</li>
+    {% endif %}
+	{% endfor %}
+
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+
+	
 <script>
 window.onload=function()
 {
@@ -129,59 +172,3 @@ fetch('https://v1.hitokoto.cn')
 		  )
 </script>
 
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
-<strong>─────────────────────────────────────────────────</strong>
-<div id="blog_begin"><p><strong>下面是华丽的文章:</strong></p></div>
-
-<!-- don't zai zhe xia mian do anything --> 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:150 }}
-        </div>
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-
-<hr>
-{% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-
-	{% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-	<!-- <span class="active">{{ page }}</span> -->
-    {% elsif page == 1 %}
-    <li class="mid">
-		<a href="/">{{ page }}</a>
-	</li>
-    {% else %}
-    <li class="mid">
-		<a href="/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-	</li>
-    {% endif %}
-	{% endfor %}
-
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
