@@ -32,7 +32,8 @@ header-img: img/HY_zly.jpg
 <button onclick="see_Quan_name()" type="button" class="btn btn-block btn-info" id="to_see_Quan_name">查看权限</button>
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-<p id="hitokoto">正在选取骚话...嗯?莫非这个浏览器不支持骚话?</p>
+<p id="hitokoto">正在选取骚话...</p>
+<p id="hitokoto_from">嗯?莫非这个浏览器不支持骚话?</p>
 <!-- end of more -->
 </div>
 
@@ -161,7 +162,8 @@ fetch('https://v1.hitokoto.cn')
 			function (data)
 			{
 				var hitokoto = document.getElementById('hitokoto');
-				hitokoto.innerHTML = '一句骚话:' + data.hitokoto;
+				hitokoto.innerHTML = '一句骚话:<stong>' + data.hitokoto + '</stong>';
+				hitokoto_from.innerHTML = '<i>--' + data.from + '</i>';
 			}
 		 )
 	.catch(
