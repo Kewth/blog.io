@@ -77,6 +77,7 @@ onload = function() {
 					click_cnt = 0;
 					$elem.innerText = "❤❤❤";
 				}
+			else
                 $elem.innerText = "❤x" + Math.floor(click_cnt);
                 break;
         }
