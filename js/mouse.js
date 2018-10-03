@@ -80,6 +80,7 @@ onload = function() {
                 $elem.innerText = "❤x" + Math.floor(click_cnt);
                 break;
         }
+		click_cnt = Math.floor(click_cnt);
         $elem.style.fontSize = Math.random() * 18 + 6 + "px";
         var increase = 0;
         var anim;
