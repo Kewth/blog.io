@@ -21,4 +21,5 @@ function debug_test()
 		{
 			dealWith(error)
 		} );
+	alert('end');
 }
