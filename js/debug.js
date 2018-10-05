@@ -62,10 +62,6 @@ function SAVE()
 function debug_test()
 {
 	alert('start');
-	AV.init({
-		  appId: 'ULc6VQsRiQr4NENpfoJpfd52-gzGzoHsz' ,
-		  appKey: 'iYA2I9QBd6SJ1fwGOQxceyQD'
-	});
 	READ();
 	SAVE();
 }
