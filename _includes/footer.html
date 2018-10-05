@@ -124,7 +124,11 @@
 <!-- 存储服务 -->
 <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js" async="async"></script>
 <script>
-	AV.init('{{ site.leancloud.app_id }}' , '{{ site.leancloud.app_key }}' );
+	AV.init({
+		appId: '{{ site.leancloud.app_id }}' ,
+		appKey: '{{ site.leancloud.app_key }}'
+	});
+	console.log(window.AV);
 </script>
 <!-- 实时消息服务 -->
 <!-- <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script> -->

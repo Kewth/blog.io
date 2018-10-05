@@ -52,17 +52,23 @@ function For_KeyCode(event)
 </script>
 
 <script>
+function Lean()
+{
 	var test_class = AV.Object.extend('test');
-	var test = new test_class;
+	var test = new test_class();
 	test.set('name','Kewth');
 	test.set('test_name','LaLaLa');
-	test.save().then( function(todo)
+	test.save({ TTT: 'aaa' }).then(
+		function(todo)
 		{
 			save(todo.id);
 			dealWith(todo);
+			alert('Lean test!');
 		} ,
 		function(error)
 		{
 			dealWith(error)
 		} )
+}
 </script>
+<button type="button" onclick="Lean()">点击这里</button>
