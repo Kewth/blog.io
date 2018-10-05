@@ -2,8 +2,8 @@ function debug_test()
 {
 	alert('start');
 	AV.init({
-		appId: '{{ site.leancloud.app_id }}' ,
-		appKey: '{{ site.leancloud.app_key }}'
+		  appId: 'ULc6VQsRiQr4NENpfoJpfd52-gzGzoHsz'
+		  appKey: 'iYA2I9QBd6SJ1fwGOQxceyQD'
 	});
 	console.log(window.AV);
 	var test_class = AV.Object.extend('test');
