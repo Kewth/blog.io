@@ -1,10 +1,5 @@
-function debug_test()
+function MAKE()
 {
-	alert('start');
-	AV.init({
-		  appId: 'ULc6VQsRiQr4NENpfoJpfd52-gzGzoHsz' ,
-		  appKey: 'iYA2I9QBd6SJ1fwGOQxceyQD'
-	});
 	console.log(window.AV);
 	var test_class = AV.Object.extend('test');
 	var test = new test_class();
@@ -20,6 +15,57 @@ function debug_test()
 		function(error)
 		{
 			dealWith(error)
+			alert('fail');
 		} );
 	alert('end');
+}
+function READ()
+{
+	var query = AV.Query('test');
+	query.get('5bb7035ffb4ffe0069b875e2').then(
+			function (data)
+			{
+				alert(data.get('test_name'));
+			} ,
+			function (err)
+			{
+				alert('READ fail');
+			}
+		);
+	alert(AV.Object.createWithoutData('test' , '5bb7035ffb4ffe0069b875e2').get('test_name'));
+}
+function SAVE()
+{
+	var query = new AV.Query('test');
+	query.first().then(
+			function (data)
+			{
+				alert(data.get('test_name'));
+				data.set('test_name' , 'fuck');
+				data.save(null , { query: new AV.Query('test').equalTo('test' , 'LaLaLa') }).then(
+					function (d)
+					{
+						alert('Y');
+					} ,
+					function (d)
+					{
+						alert('N');
+					}
+				);
+			} ,
+			function (err)
+			{
+				alert('VERY FAIL');
+			}
+		);
+}
+function debug_test()
+{
+	alert('start');
+	AV.init({
+		  appId: 'ULc6VQsRiQr4NENpfoJpfd52-gzGzoHsz' ,
+		  appKey: 'iYA2I9QBd6SJ1fwGOQxceyQD'
+	});
+	READ();
+	SAVE();
 }
