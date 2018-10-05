@@ -120,6 +120,15 @@
 <script src="{{ "/js/keycode.js " | prepend: site.baseurl }}" async="async"></script>
 <script src="{{ "/js/mouse.js   " | prepend: site.baseurl }}" async="async"></script>
 
+<!-- LeanCloud -->
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js" async="async"></script>
+<script>
+	AV.init('{{ site.leancloud.app_id }}' , '{{ site.leancloud.app_key }}' );
+</script>
+<!-- 实时消息服务 -->
+<!-- <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script> -->
+
 <!-- Highlight.js -->
 <script>
     async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js",function(){
