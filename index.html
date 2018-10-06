@@ -189,7 +189,7 @@ fetch('https://v1.hitokoto.cn')
 function User_upd()
 {
 	var user = AV.User.current();
-	if(user)
+	if(user.get('username' != null)
 	{
 		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.get('username') + '</p>';
 	}
@@ -221,7 +221,7 @@ function User_do()
 	{
 		tip.innerHTML = '未填写密码!';
 	}
-	else if(upa)
+	else if(upa != '')
 	{
 		if(upa != upass)
 		{
@@ -249,6 +249,8 @@ function User_do()
 		User_login(uname , upass);
 	}
 }
+</script>
+<script>
 User_upd();
 </script>
 
