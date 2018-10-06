@@ -223,19 +223,26 @@ function User_do()
 	}
 	else if(upa)
 	{
-		var user = new User();
-		user.setUsername(uname);
-		user.setPassword(upass);
-		user.signUp().then(
-			function (us)
-			{
-				alert('注册成功!');
-				User_login(uname , upass);
-			} ,
-			function (us)
-			{
-				tip.innerHTML = '此用户名已被注册!';
-			} );
+		if(upa != upass)
+		{
+			tip.innerHTML = '密码不一致!';
+		}
+		else 
+		{
+			var user = new AV.User();
+			user.setUsername(uname);
+			user.setPassword(upass);
+			user.signUp().then(
+				function (us)
+				{
+					alert('注册成功!');
+					User_login(uname , upass);
+				} ,
+				function (us)
+				{
+					tip.innerHTML = '此用户名已被注册!';
+				} );
+		}
 	}
 	else 
 	{
