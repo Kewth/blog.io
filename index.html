@@ -187,6 +187,18 @@ fetch('https://v1.hitokoto.cn')
 		  )
 function User_do()
 {
+	var user = new User();
+	var uname = document.getElementById('User_name').value;
+	var upass = document.getElementById('User_pass').value;
+	var upa = document.getElementById('User_pass_again').value;
+	if(not uname or uname == '必填')
+	{
+		document.getElementById('User_tips').innerHTML = '未填写用户名!'
+	}
+	else if(not upass)
+	{
+		document.getElementById('User_tips').innerHTML = '未填写密码!'
+	}
 }
 </script>
 
