@@ -185,19 +185,52 @@ fetch('https://v1.hitokoto.cn')
 				console.error(err);
 			}
 		  )
+function User_login(uname , upass)
+{
+	AV.User.logIn(uname , upass).then(
+		function (us)
+		{
+			alert('登录成功!');
+		} ,
+		function (us)
+		{
+			alert('登录失败.用户名或密码错误?');
+		} );
+	User_upd();
+}
 function User_do()
 {
-	var user = new User();
 	var uname = document.getElementById('User_name').value;
 	var upass = document.getElementById('User_pass').value;
 	var upa = document.getElementById('User_pass_again').value;
+	var tip = document.getElementById('User_tips');
 	if(not uname or uname == '必填')
 	{
-		document.getElementById('User_tips').innerHTML = '未填写用户名!'
+		tip.innerHTML = '未填写用户名!'
 	}
 	else if(not upass)
 	{
-		document.getElementById('User_tips').innerHTML = '未填写密码!'
+		tip.innerHTML = '未填写密码!'
+	}
+	else if(upa)
+	{
+		var user = new User();
+		user.setUsername(uname);
+		user.setPassword(upass);
+		user.signUp().then(
+			function (us)
+			{
+				alert('注册成功!');
+				User_login(uname , upass);
+			} ,
+			function (us)
+			{
+				tip.innerHTML = '此用户名已被注册!';
+			} );
+	}
+	else 
+	{
+		User_login(uname , upass);
 	}
 }
 </script>
