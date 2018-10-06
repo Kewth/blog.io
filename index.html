@@ -22,8 +22,10 @@ header-img: img/HY_zly.jpg
 <div id="User">
 	<p>用户名</p>
 	<input type="text" id="User_name" value="必填" />
-	<p>密码</p>
-	<input type="password" id="User_pass" value="必填" />
+	<p>密码(必填)</p>
+	<input type="password" id="User_pass" />
+	<p>确认密码(填写意味着注册)</p>
+	<input type="password" id="User_pass_again" />
 	<p id="User_tips"><p>
 	<button type="button" onclick="User_do()">登录/注册</button>
 </div>
@@ -183,5 +185,8 @@ fetch('https://v1.hitokoto.cn')
 				console.error(err);
 			}
 		  )
+function User_do()
+{
+}
 </script>
 
