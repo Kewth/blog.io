@@ -213,13 +213,13 @@ function User_do()
 	var upass = document.getElementById('User_pass').value;
 	var upa = document.getElementById('User_pass_again').value;
 	var tip = document.getElementById('User_tips');
-	if(not uname or uname == '必填')
+	if(uname == null || uname == '必填')
 	{
-		tip.innerHTML = '未填写用户名!'
+		tip.innerHTML = '未填写用户名!';
 	}
-	else if(not upass)
+	else if(upass == null)
 	{
-		tip.innerHTML = '未填写密码!'
+		tip.innerHTML = '未填写密码!';
 	}
 	else if(upa)
 	{
