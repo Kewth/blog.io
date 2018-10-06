@@ -192,7 +192,7 @@ fetch('https://v1.hitokoto.cn')
 function User_upd()
 {
 	var user = AV.User.current();
-	if(user.get('username' != null))
+	if(user.get('username') != null)
 	{
 		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.get('username') + '</p>';
 	}
