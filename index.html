@@ -191,7 +191,7 @@ function User_upd()
 	var user = AV.User.current();
 	if(user)
 	{
-		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.name + '</p>';
+		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.get('username') + '</p>';
 	}
 }
 function User_login(uname , upass)
