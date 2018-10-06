@@ -10,7 +10,7 @@ header-img: img/HY_zly.jpg
 <p><strong>目录:</strong></p>
 <ul>
 	<li><a href="/help">寻求帮助</a></li>
-	<li><a href="#User">登录/注册</a></li>
+	<li><a href="#User" onclick="User_upd()">登录/注册</a></li>
 	<li><a href="#jsq_only">计数器</a></li>
 	<li><a href="#get_name_of_Quan">权限</a></li>
 	<li><a href="#hitokoto">一言</a></li>
@@ -20,23 +20,7 @@ header-img: img/HY_zly.jpg
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <div id="User">
-	<p>
-		用户名
-		<input type="text" id="User_name" />
-		(必填)
-	</p>
-	<p>
-		密码
-		<input type="password" id="User_pass" />
-		(必填)
-	</p>
-	<p>
-		确认密码
-		<input type="password" id="User_pass_again" />
-		(填写意味着注册)
-	</p>
-	<p id="User_tips"><p>
-	<button type="button" onclick="User_do()" class="btn btn-block btn-info">登录/注册</button>
+	<p>点击开始十分简易的注册/登录(切勿滥用!)</p>
 </div>
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
@@ -202,6 +186,26 @@ function User_upd()
 	{
 		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.get('username') + '</p>';
 	}
+	else
+	{
+		document.getElementById('User').innerHTML = '<p>'
+			+ '用户名'
+			+ '<input type="text" id="User_name" />'
+			+ '(必填)'
+			+ '</p>'
+			+ '<p>'
+			+ '密码'
+			+ '<input type="password" id="User_pass" />'
+			+ '(必填)'
+			+ '</p>'
+			+ '<p>'
+			+ '确认密码'
+			+ '<input type="password" id="User_pass_again" />'
+			+ '(填写意味着注册)'
+			+ '</p>'
+			+ '<p id="User_tips"><p>'
+			+ '<button type="button" onclick="User_do()" class="btn btn-block btn-info">登录/注册</button>'
+	}
 }
 function User_login(uname , upass)
 {
@@ -260,7 +264,3 @@ function User_do()
 	}
 }
 </script>
-<script>
-User_upd();
-</script>
-
