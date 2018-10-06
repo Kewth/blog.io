@@ -185,6 +185,14 @@ fetch('https://v1.hitokoto.cn')
 				console.error(err);
 			}
 		  )
+function User_upd()
+{
+	var user = AV.User.current();
+	if(user)
+	{
+		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.name + '</p>';
+	}
+}
 function User_login(uname , upass)
 {
 	AV.User.logIn(uname , upass).then(
@@ -233,5 +241,6 @@ function User_do()
 		User_login(uname , upass);
 	}
 }
+User_upd();
 </script>
 
