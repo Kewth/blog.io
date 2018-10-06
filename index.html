@@ -3,144 +3,6 @@ layout: page
 description: Maybe Kewth's blog?
 header-img: img/HY_zly.jpg
 ---
-	
-<script>
-window.onload=function()
-{
-	if(getCookie("Long_Time_No_See") == null)
-	{
-		alert('long time no see');
-		setCookie("Long_Time_No_See","true",'d7');
-		document.write("<p>很久没有,或者第一次访问这个博客的主页吧<\/p>");
-		document.write("<p>先了解一下,获取帮助?<\/p>");
-		document.write("<p>将在3秒后自动跳转到帮助页面<\/p>");
-		document.write("<a href='/'>你也可以点这直接访问主页<\/a>");
-		setTimeout(function() {location.href = '/help/';} , "3000");
-	}
-	else
-		setCookie("Long_Time_No_See","true",'m1');
-}
-function see_Quan_name()
-{
-	var x_Quan_name = document.getElementById("Quan_name");
-	if(x_Quan_name.innerHTML=="")
-	{
-		x_Quan_name.innerHTML="当前权限:"+getCookie('Quan_name');
-		document.getElementById("to_see_Quan_name").innerHTML="隐藏权限";
-	}
-	else
-	{
-		x_Quan_name.innerHTML="";
-		document.getElementById("to_see_Quan_name").innerHTML="查看权限";
-	}
-}
-function get_name_of_Quan()
-{
-	var x_get_name = document.getElementById("get_name_of_Quan");
-	var st=x_get_name.value;
-	if(st=="")
-	{
-		if(getCookie("Quan_name")!=null)
-			location.href='/Quan/'+getCookie('Quan_name')+'/';
-		else 
-			location.href='/Quan/NULL/';
-	}
-	else if(st=="Kewth" || st=="Debug")
-	{
-		setCookie('Quan_name',st,'d1');
-		location.href='/Quan/'+st+'/';
-	}
-	else 
-	{
-		alert("没有此权限名!");
-	}
-}
-function Wen_only()
-{
-	var line1="<strong><p>当前为纯文章模式<\/p><\/strong>";
-	var line2="<a href='/'>点此进入正常模式<\/a>";
-	document.getElementById("MORE").innerHTML = line1 + line2;
-}
-fetch('https://v1.hitokoto.cn')
-	.then(
-			function (res)
-			{
-				return res.json();
-			}
-		 )
-	.then(
-			function (data)
-			{
-				var hitokoto = document.getElementById('hitokoto');
-				hitokoto.innerHTML = '一句骚话:<strong>' + data.hitokoto + '</strong>';
-				hitokoto_from.innerHTML = '<i>--' + data.from + '</i>';
-			}
-		 )
-	.catch(
-			function (err)
-			{
-				console.error(err);
-			}
-		  )
-function User_upd()
-{
-	var user = AV.User.current();
-	if(user)
-	{
-		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.name + '</p>';
-	}
-}
-function User_login(uname , upass)
-{
-	AV.User.logIn(uname , upass).then(
-		function (us)
-		{
-			alert('登录成功!');
-		} ,
-		function (us)
-		{
-			alert('登录失败.用户名或密码错误?');
-		} );
-	User_upd();
-}
-function User_do()
-{
-	var uname = document.getElementById('User_name').value;
-	var upass = document.getElementById('User_pass').value;
-	var upa = document.getElementById('User_pass_again').value;
-	var tip = document.getElementById('User_tips');
-	if(not uname or uname == '必填')
-	{
-		tip.innerHTML = '未填写用户名!'
-	}
-	else if(not upass)
-	{
-		tip.innerHTML = '未填写密码!'
-	}
-	else if(upa)
-	{
-		var user = new User();
-		user.setUsername(uname);
-		user.setPassword(upass);
-		user.signUp().then(
-			function (us)
-			{
-				alert('注册成功!');
-				User_login(uname , upass);
-			} ,
-			function (us)
-			{
-				tip.innerHTML = '此用户名已被注册!';
-			} );
-	}
-	else 
-	{
-		User_login(uname , upass);
-	}
-}
-User_upd();
-</script>
-
 
 <div id="MORE">
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
@@ -244,7 +106,6 @@ User_upd();
 </ul>
 {% endif %}
 
-	
 <script>
 window.onload=function()
 {
@@ -322,7 +183,9 @@ fetch('https://v1.hitokoto.cn')
 			{
 				console.error(err);
 			}
-		  )
+		  ) ;
+</script>
+<script>
 function User_upd()
 {
 	var user = AV.User.current();
