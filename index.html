@@ -192,7 +192,7 @@ fetch('https://v1.hitokoto.cn')
 function User_upd()
 {
 	var user = AV.User.current();
-	if(user.get('username' != null)
+	if(user.get('username' != null))
 	{
 		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.get('username') + '</p>';
 	}
@@ -225,7 +225,14 @@ function User_do()
 		tip.innerHTML = '未填写密码!';
 	}
 	else if(upa != '')
+function User_upd()
+{
+	var user = AV.User.current();
+	if(user.get('username' != null)
 	{
+		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.get('username') + '</p>';
+	}
+}	{
 		if(upa != upass)
 		{
 			tip.innerHTML = '密码不一致!';
