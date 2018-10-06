@@ -16,6 +16,7 @@ You must know Kewth , so why do you ask?
 In short , he's a great person!   
 
 #### History:  
+- 2018-10-06: 添加纯粹的账号功能.
 - 2018-10-03: 添加鼠标点击特效.
 - 2018-10-02: 主页添加一言.  
 - 2018-09-30: 主页访问人数达到100.  
