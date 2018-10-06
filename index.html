@@ -20,7 +20,7 @@ header-img: img/HY_zly.jpg
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <div id="User">
-	<p>点击开始十分简易的注册/登录(切勿滥用!)</p>
+	<a onclick="User_upd()">点击开始十分简易的注册/登录(切勿滥用!)</a>
 </div>
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
@@ -182,9 +182,11 @@ fetch('https://v1.hitokoto.cn')
 function User_upd()
 {
 	var user = AV.User.current();
-	if(user.get('username') != null)
+	if(user != null && user.get('username') != null)
 	{
-		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend ' + user.get('username') + '</p>';
+		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend <strong>' + user.get('username') + '</strong></p>'
+			+ '<a onclick="User_logout()">点此注销</a>'
+		;
 	}
 	else
 	{
@@ -205,6 +207,7 @@ function User_upd()
 			+ '</p>'
 			+ '<p id="User_tips"><p>'
 			+ '<button type="button" onclick="User_do()" class="btn btn-block btn-info">登录/注册</button>'
+		;
 	}
 }
 function User_login(uname , upass)
@@ -220,6 +223,18 @@ function User_login(uname , upass)
 		{
 			alert('登录失败.用户名或密码错误?');
 		} );
+}
+function User_logout()
+{
+	var user = AV.User.current();
+	if(user == null || user.get('username') == '')
+	{
+		alert('并未登录');
+	}
+	else
+	{
+		AV.User.logOut();
+	}
 }
 function User_do()
 {
