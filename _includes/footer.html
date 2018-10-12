@@ -1,4 +1,5 @@
 <!-- Footer -->
+<img src="http://cc.amazingcounters.com/counter.php?i=3225856&c=9677881" alt="AmazingCounters.com" width="10%" height="10%" >
 <footer>
     <div class="container">
         <div class="row">
@@ -104,26 +105,6 @@
     </div>
 </footer>
 
-<!-- Begin -->
-<!-- <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px; -->
-<!--       opacity: 0.95; background-color: #111111; z-index: 9999; display: none;"> -->
-<!--     <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" > -->
-
-<!--     <div style="position: fixed; top: 16px; right: 16px;"> -->
-<!--         <img src="/search/img/cb-close.png"  id="cb-close-btn"/> -->
-<!--     </div> -->
-<!-- </div> -->
-
-<!-- <div style="position: fixed; right: 16px; bottom: 20px;"> -->
-<!--     <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/> -->
-<!-- </div> -->
-
-<!-- <link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}"> -->
-
-<!-- <script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script> -->
-<!-- <script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script> -->
-<!-- End -->
-
 <!-- jQuery -->
 <!-- <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script> -->
 <script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
@@ -135,9 +116,24 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
 
+<!-- LeanCloud -->
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js" ></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-live-query-min.js"></script>
+<script>
+	AV.init({
+		  appId: 'ULc6VQsRiQr4NENpfoJpfd52-gzGzoHsz' ,
+		  appKey: 'iYA2I9QBd6SJ1fwGOQxceyQD'
+	});
+</script>
+<!-- 实时消息服务 -->
+<!-- <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script> -->
+
 <!-- My js -->
-<script src="{{ "/js/cookies.js " | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/keycode.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/cookies.js " | prepend: site.baseurl }}" async="async"></script>
+<script src="{{ "/js/keycode.js " | prepend: site.baseurl }}" async="async"></script>
+<script src="{{ "/js/mouse.js   " | prepend: site.baseurl }}" async="async"></script>
+<script src="{{ "/js/debug.js   " | prepend: site.baseurl }}" async="async"></script>
 
 <!-- Highlight.js -->
 <script>
@@ -166,4 +162,3 @@
 <script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
 <!-- End -->
-

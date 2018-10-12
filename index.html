@@ -5,44 +5,99 @@ header-img: img/HY_zly.jpg
 ---
 
 <div id="MORE">
-<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <p><strong>目录:</strong></p>
 <ul>
 	<li><a href="/help">寻求帮助</a></li>
+	<li><a href="#User" onclick="User_upd()">登录/注册</a></li>
 	<li><a href="#jsq_only">计数器</a></li>
 	<li><a href="#get_name_of_Quan">权限</a></li>
+	<li><a href="#hitokoto">一言</a></li>
 	<li><a href="#blog_begin">文章</a></li>
-	<!-- <li><a href="/purely">纯文章模式</a></li> -->
-	<li><button onclick="Wen_only()">纯文章模式</button></li>
+	<li><a onclick="Wen_only()">纯文章模式</a></li>
 </ul>
-
-
-
-
-
-<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-
+<div id="User">
+	<a onclick="User_upd()">点击开始十分简易的注册/登录(切勿滥用!)</a>
+</div>
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
+<strong>─────────────────────────────────────────────────</strong>
 <div align="center" id="jsq_only">
 	<p>这是一个mini计数器</p>
 </div>
 <div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com"></a></div>
-
 <div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225856&c=9677881" alt="AmazingCounters.com"></a></div>
-
-
-
-<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
-
 <p>输入权限名:</p>
 <input id="get_name_of_Quan" type="text" />
 <button type="button" onclick="get_name_of_Quan()" class="btn-info">权限页面跳转</button>
-
 <p id="Quan_name"></p>
 <button onclick="see_Quan_name()" type="button" class="btn btn-block btn-info" id="to_see_Quan_name">查看权限</button>
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
+<strong>─────────────────────────────────────────────────</strong>
+<p id="hitokoto">正在选取骚话...</p>
+<p id="hitokoto_from">嗯?莫非这个浏览器不支持骚话?</p>
+<!-- end of more -->
 </div>
+
+<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
+<strong>─────────────────────────────────────────────────</strong>
+<div id="blog_begin"><p><strong>下面是华丽的文章:</strong></p></div>
+<!-- don't zai zhe xia mian do anything --> 
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">            
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {{ post.content | strip_html | truncate:150 }}
+        </div>
+    </a>
+    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+</div>
+
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+	<!-- <span class="active">{{ page }}</span> -->
+    {% elsif page == 1 %}
+    <li class="mid">
+		<a href="/">{{ page }}</a>
+	</li>
+    {% else %}
+    <li class="mid">
+		<a href="/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	</li>
+    {% endif %}
+	{% endfor %}
+
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
 
 <script>
 window.onload=function()
@@ -101,61 +156,127 @@ function Wen_only()
 	var line2="<a href='/'>点此进入正常模式<\/a>";
 	document.getElementById("MORE").innerHTML = line1 + line2;
 }
+fetch('https://v1.hitokoto.cn')
+	.then(
+			function (res)
+			{
+				return res.json();
+			}
+		 )
+	.then(
+			function (data)
+			{
+				var hitokoto = document.getElementById('hitokoto');
+				hitokoto.innerHTML = '一句骚话:<strong>' + data.hitokoto + '</strong>';
+				hitokoto_from.innerHTML = '<i>--' + data.from + '</i>';
+			}
+		 )
+	.catch(
+			function (err)
+			{
+				console.error(err);
+			}
+		  ) ;
 </script>
-
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
-<strong>─────────────────────────────────────────────────</strong>
-<div id="blog_begin"><p><strong>下面是华丽的文章:</strong></p></div>
-
-<!-- don't zai zhe xia mian do anything --> 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:150 }}
-        </div>
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-
-<hr>
-{% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-
-	{% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-	<!-- <span class="active">{{ page }}</span> -->
-    {% elsif page == 1 %}
-    <li class="mid">
-		<a href="/">{{ page }}</a>
-	</li>
-    {% else %}
-    <li class="mid">
-		<a href="/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-	</li>
-    {% endif %}
-	{% endfor %}
-
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+<script>
+function User_upd()
+{
+	var user = AV.User.current();
+	if(user != null && user.get('username') != null)
+	{
+		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend <strong>' + user.get('username') + '</strong></p>'
+			+ '<a onclick="User_logout()">点此注销</a>'
+		;
+	}
+	else
+	{
+		document.getElementById('User').innerHTML = '<p>'
+			+ '用户名'
+			+ '<input type="text" id="User_name" />'
+			+ '(必填)'
+			+ '</p>'
+			+ '<p>'
+			+ '密码'
+			+ '<input type="password" id="User_pass" />'
+			+ '(必填)'
+			+ '</p>'
+			+ '<p>'
+			+ '确认密码'
+			+ '<input type="password" id="User_pass_again" />'
+			+ '(填写意味着注册)'
+			+ '</p>'
+			+ '<p id="User_tips"><p>'
+			+ '<button type="button" onclick="User_do()" class="btn btn-block btn-info">登录/注册</button>'
+		;
+	}
+}
+function User_login(uname , upass)
+{
+	AV.User.logIn(uname , upass).then(
+		function (us)
+		{
+			alert('登录成功!');
+			document.getElementById('User_tips').innerHTML = '登陆成功';
+			User_upd();
+		} ,
+		function (us)
+		{
+			alert('登录失败.用户名或密码错误?');
+		} );
+}
+function User_logout()
+{
+	var user = AV.User.current();
+	if(user == null || user.get('username') == '')
+	{
+		alert('并未登录');
+	}
+	else
+	{
+		AV.User.logOut();
+		User_upd();
+	}
+}
+function User_do()
+{
+	var uname = document.getElementById('User_name').value;
+	var upass = document.getElementById('User_pass').value;
+	var upa = document.getElementById('User_pass_again').value;
+	var tip = document.getElementById('User_tips');
+	if(uname == '' || uname == '必填')
+	{
+		tip.innerHTML = '未填写用户名!';
+	}
+	else if(upass == '')
+	{
+		tip.innerHTML = '未填写密码!';
+	}
+	else if(upa != '')
+	{
+		if(upa != upass)
+		{
+			tip.innerHTML = '密码不一致!';
+		}
+		else 
+		{
+			var user = new AV.User();
+			user.setUsername(uname);
+			user.setPassword(upass);
+			user.signUp().then(
+				function (us)
+				{
+					alert('注册成功!');
+					User_login(uname , upass);
+				} ,
+				function (us)
+				{
+					tip.innerHTML = '此用户名已被注册!';
+				} );
+		}
+	}
+	else 
+	{
+		User_login(uname , upass);
+	}
+}
+</script>

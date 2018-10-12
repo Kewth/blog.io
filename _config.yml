@@ -70,5 +70,10 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
+leancloud:
+  enable: true
+  app_id: ULc6VQsRiQr4NENpfoJpfd52-gzGzoHsz
+  app_key: iYA2I9QBd6SJ1fwGOQxceyQD
+
 # Links to include in footer navigation
 # NULL
