@@ -93,10 +93,21 @@ header-img: img/HY_zly.jpg
 {% endif %}
 
 <script>
-window.onload=function()
+function all_done()
 {
-	if(getCookie("Long_Time_No_See") == null)
-	{
+	var todo = AV.Object.createWithoutData('counter', '5bcbcf7efb4ffecf3b1e3b3a');
+	todo.fetch().then(
+		function() {
+			alert('su');
+			var num = todo.get('number');
+			num = num + 1;
+			todo.set('number' , num);
+			todo.save();
+		} , function(error) {
+			alert('error');
+		}
+	);
+	if(getCookie("Long_Time_No_See") == null) {
 		alert('long time no see');
 		setCookie("Long_Time_No_See","true",'d7');
 		document.write("<p>很久没有,或者第一次访问这个博客的主页吧<\/p>");
@@ -105,29 +116,12 @@ window.onload=function()
 		document.write("<a href='/'>你也可以点这直接访问主页<\/a>");
 		setTimeout(function() {location.href = '/help/';} , "3000");
 	}
-	else
+	else {
 		setCookie("Long_Time_No_See","true",'d7');
-	// var query = new AV.Query('counter');
-	// query.get('5bcbcf7efb4ffecf3b1e3b3a').then(
-		// function (cnt) {
-			// var num = cnt.get('number');
-			// num ++;
-			// cnt.set('number' , num);
-			// cnt.save();
-		// }, function (error) {
-			// alert('error')
-		// }
-	// );
-	var todo = AV.Object.createWithoutData('counter', '5bcbcf7efb4ffecf3b1e3b3a');
-	todo.fetch().then(
-		function() {
-			var num = todo.get('number');
-			num = num + 1;
-			todo.set('number' , num);
-			todo.save();
-		} , function(error) {
-		}
+	}
 }
+</script>
+<script>
 function see_Quan_name()
 {
 	var x_Quan_name = document.getElementById("Quan_name");
