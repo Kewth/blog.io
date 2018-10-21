@@ -107,16 +107,26 @@ window.onload=function()
 	}
 	else
 		setCookie("Long_Time_No_See","true",'d7');
-	var query = new AV.Query('counter');
-	query.get('5bcbcf7efb4ffecf3b1e3b3a').then(
-		function (cnt) {
-			var num = cnt.get('number');
-			num ++;
-			cnt.set('number' , num);
-			cnt.save();
-		}, function (error) {
+	// var query = new AV.Query('counter');
+	// query.get('5bcbcf7efb4ffecf3b1e3b3a').then(
+		// function (cnt) {
+			// var num = cnt.get('number');
+			// num ++;
+			// cnt.set('number' , num);
+			// cnt.save();
+		// }, function (error) {
+			// alert('error')
+		// }
+	// );
+	var todo = AV.Object.createWithoutData('counter', '5bcbcf7efb4ffecf3b1e3b3a');
+	todo.fetch().then(
+		function() {
+			var num = todo.get('number');
+			num = num + 1;
+			todo.set('number' , num);
+			todo.save();
+		} , function(error) {
 		}
-	);
 }
 function see_Quan_name()
 {
