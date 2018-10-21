@@ -90,13 +90,13 @@ function all_done()
 	var todo = AV.Object.createWithoutData('counter', '5bcbcf7efb4ffecf3b1e3b3a');
 	todo.fetch().then(
 		function() {
-			alert('su');
+			// alert('su');
 			var num = todo.get('number');
 			num = num + 1;
 			todo.set('number' , num);
 			todo.save();
 		} , function(error) {
-			alert('error');
+			// alert('error');
 		}
 	);
 	if(getCookie("Long_Time_No_See") == null) {
@@ -114,41 +114,6 @@ function all_done()
 }
 </script>
 <script>
-function see_Quan_name()
-{
-	var x_Quan_name = document.getElementById("Quan_name");
-	if(x_Quan_name.innerHTML=="")
-	{
-		x_Quan_name.innerHTML="当前权限:"+getCookie('Quan_name');
-		document.getElementById("to_see_Quan_name").innerHTML="隐藏权限";
-	}
-	else
-	{
-		x_Quan_name.innerHTML="";
-		document.getElementById("to_see_Quan_name").innerHTML="查看权限";
-	}
-}
-function get_name_of_Quan()
-{
-	var x_get_name = document.getElementById("get_name_of_Quan");
-	var st=x_get_name.value;
-	if(st=="")
-	{
-		if(getCookie("Quan_name")!=null)
-			location.href='/Quan/'+getCookie('Quan_name')+'/';
-		else 
-			location.href='/Quan/NULL/';
-	}
-	else if(st=="Kewth" || st=="Debug")
-	{
-		setCookie('Quan_name',st,'d1');
-		location.href='/Quan/'+st+'/';
-	}
-	else 
-	{
-		alert("没有此权限名!");
-	}
-}
 function Wen_only()
 {
 	var line1="<strong><p>当前为纯文章模式<\/p><\/strong>";
