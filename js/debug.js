@@ -8,14 +8,16 @@ function MAKE()
 	test.save({ TTT: 'aaa' }).then(
 		function(todo)
 		{
+			alert('Lean test');
 			save(todo.id);
 			dealWith(todo);
 			alert('Lean test!');
 		} ,
 		function(error)
 		{
-			dealWith(error)
 			alert('fail');
+			dealWith(error)
+			alert('fail!');
 		} );
 	alert('end');
 }
