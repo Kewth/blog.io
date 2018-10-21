@@ -6,6 +6,8 @@ description: About this kewth's blog
 header-img: img/green.jpg
 ---
 
+## Description:
+
 这是一个叫Kewth的蒟蒻的辣鸡网站   
 This is a super super powerful website of a powerful person named Kewth.   
 
@@ -15,7 +17,10 @@ You must know Kewth , so why do you ask?
 反正就是一个菜鸡啦!   
 In short , he's a great person!   
 
-#### History:  
+## History:
+- 2018-10-21: 删除权限名.  
+- 2018-10-21: 用户的功能增加.  
+- 2018-10-21: Amazing-counter炸了,用自己写的计数器代替(但不在主页显示).  
 - 2018-10-06: 添加纯粹的账号功能.
 - 2018-10-03: 添加鼠标点击特效.
 - 2018-10-02: 主页添加一言.  
