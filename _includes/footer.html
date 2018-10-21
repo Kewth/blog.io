@@ -1,5 +1,4 @@
 <!-- Footer -->
-<img src="http://cc.amazingcounters.com/counter.php?i=3225856&c=9677881" alt="AmazingCounters.com" width="10%" height="10%" >
 <footer>
     <div class="container">
         <div class="row">
@@ -117,10 +116,10 @@
 <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- LeanCloud -->
-<!-- 存储服务 -->
 <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js" ></script>
 <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-live-query-min.js"></script>
 <script>
+	var { Query, User } = AV;
 	AV.init({
 		  appId: 'ULc6VQsRiQr4NENpfoJpfd52-gzGzoHsz' ,
 		  appKey: 'iYA2I9QBd6SJ1fwGOQxceyQD'
@@ -130,7 +129,7 @@
 <!-- <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script> -->
 
 <!-- My js -->
-<script src="{{ "/js/cookies.js " | prepend: site.baseurl }}" async="async"></script>
+<script src="{{ "/js/cookies.js " | prepend: site.baseurl }}" ></script>
 <script src="{{ "/js/keycode.js " | prepend: site.baseurl }}" async="async"></script>
 <script src="{{ "/js/mouse.js   " | prepend: site.baseurl }}" async="async"></script>
 <script src="{{ "/js/debug.js   " | prepend: site.baseurl }}" async="async"></script>
@@ -142,6 +141,10 @@
 <!--     }) -->
 <!-- </script> -->
 <!-- <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<script>
+	all_done();
+</script>
 
 <!-- Begin -->
 <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
