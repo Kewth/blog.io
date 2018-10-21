@@ -11,7 +11,6 @@ header-img: img/HY_zly.jpg
 <ul>
 	<li><a href="/help">寻求帮助</a></li>
 	<li><a href="#User" onclick="User_upd()">登录/注册</a></li>
-	<li><a href="#jsq_only">计数器</a></li>
 	<li><a href="#get_name_of_Quan">权限</a></li>
 	<li><a href="#hitokoto">一言</a></li>
 	<li><a href="#blog_begin">文章</a></li>
@@ -22,13 +21,6 @@ header-img: img/HY_zly.jpg
 <div id="User">
 	<a onclick="User_upd()">点击开始十分简易的注册/登录(切勿滥用!)</a>
 </div>
-<hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
-<strong>─────────────────────────────────────────────────</strong>
-<div align="center" id="jsq_only">
-	<p>这是一个mini计数器</p>
-</div>
-<div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225836&c=9677821" alt="AmazingCounters.com"></a></div>
-<div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3225856&c=9677881" alt="AmazingCounters.com"></a></div>
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <p>输入权限名:</p>
@@ -47,11 +39,11 @@ header-img: img/HY_zly.jpg
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <div id="blog_begin"><p><strong>下面是华丽的文章:</strong></p></div>
-<!-- don't zai zhe xia mian do anything --> 
+<!-- don't zai zhe xia mian do anything -->
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            
+		<h2 class="post-title">
             {{ post.title }}
         </h2>
         {% if post.subtitle %}
@@ -114,7 +106,17 @@ window.onload=function()
 		setTimeout(function() {location.href = '/help/';} , "3000");
 	}
 	else
-		setCookie("Long_Time_No_See","true",'m1');
+		setCookie("Long_Time_No_See","true",'d7');
+	var query = new AV.Query('counter');
+	query.get('5bcbcf7efb4ffecf3b1e3b3a').then(
+		function (cnt) {
+			var num = cnt.get('number');
+			num ++;
+			cnt.set('number' , num);
+			cnt.save();
+		}, function (error) {
+		}
+	);
 }
 function see_Quan_name()
 {
@@ -262,7 +264,7 @@ function User_do()
 		{
 			tip.innerHTML = '密码不一致!';
 		}
-		else 
+		else
 		{
 			var user = new AV.User();
 			user.setUsername(uname);
@@ -279,7 +281,7 @@ function User_do()
 				} );
 		}
 	}
-	else 
+	else
 	{
 		User_login(uname , upass);
 	}
