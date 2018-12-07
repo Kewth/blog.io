@@ -156,6 +156,7 @@ function User_upd(click)
 		user.fetch();
 		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend <strong>' + user.get('username') + '</strong></p>'
 			+ '<p>Your permission level : ' + user.get('permission') + '</p>'
+			+ '<a href="game/2048">Have fun?</a>'
 			+ '<a onclick="User_logout()">点此注销</a>'
 		;
 		if(user.get('permission') >= 1) {
