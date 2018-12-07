@@ -18,7 +18,7 @@ header-img: img/HY_zly.jpg
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <div id="User">
-	<a onclick="User_upd(true)">点击开始十分简易的注册/登录(切勿滥用!)</a>
+	<!-- <a onclick="User_upd(true)">点击开始十分简易的注册/登录(切勿滥用!)</a> -->
 </div>
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
@@ -183,6 +183,10 @@ function User_upd(click)
 			+ '<p id="User_tips"><p>'
 			+ '<button type="button" onclick="User_do()" class="btn btn-block btn-info">登录/注册</button>'
 		;
+	} else {
+		document.getElementById('User').innerHTML = '<a onclick="User_upd(true)">'
+			+ '点击开始十分简易的注册/登录（切勿滥用！）'
+			+ '</a>'
 	}
 }
 function User_login(uname , upass)
