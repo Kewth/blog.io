@@ -10,7 +10,7 @@ header-img: img/HY_zly.jpg
 <p><strong>目录:</strong></p>
 <ul>
 	<li><a href="/help">寻求帮助</a></li>
-	<li><a href="#User" onclick="User_upd()">登录/注册</a></li>
+	<li><a href="#User" onclick="User_upd(true)">登录/注册</a></li>
 	<li><a href="#hitokoto">一言</a></li>
 	<li><a href="#blog_begin">文章</a></li>
 	<li><a onclick="Wen_only()">纯文章模式</a></li>
@@ -18,7 +18,7 @@ header-img: img/HY_zly.jpg
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
 <div id="User">
-	<a onclick="User_upd()">点击开始十分简易的注册/登录(切勿滥用!)</a>
+	<a onclick="User_upd(true)">点击开始十分简易的注册/登录(切勿滥用!)</a>
 </div>
 <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3); color: purple; width: 80%;" SIZE=3>
 <strong>─────────────────────────────────────────────────</strong>
@@ -111,6 +111,7 @@ function all_done()
 	else {
 		setCookie("Long_Time_No_See","true",'d7');
 	}
+	User_upd(false);
 }
 </script>
 <script>
@@ -147,7 +148,7 @@ function YiYan()
 YiYan();
 </script>
 <script>
-function User_upd()
+function User_upd(click)
 {
 	var user = AV.User.current();
 	if(user != null && user.get('username') != null)
@@ -162,7 +163,7 @@ function User_upd()
 		user.set('times' , user.get('times') + 1);
 		user.save();
 	}
-	else
+	else if(click)
 	{
 		document.getElementById('User').innerHTML = '<p>'
 			+ '用户名'
@@ -191,7 +192,7 @@ function User_login(uname , upass)
 		{
 			alert('登录成功!');
 			document.getElementById('User_tips').innerHTML = '登陆成功';
-			User_upd();
+			User_upd(false);
 		} ,
 		function (us)
 		{
@@ -208,7 +209,7 @@ function User_logout()
 	else
 	{
 		AV.User.logOut();
-		User_upd();
+		User_upd(false);
 	}
 }
 function User_do()
