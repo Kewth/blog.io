@@ -153,6 +153,7 @@ function User_upd(click)
 	var user = AV.User.current();
 	if(user != null && user.get('username') != null)
 	{
+		user.fetch();
 		document.getElementById('User').innerHTML = '<p>Welcome to my blog , my friend <strong>' + user.get('username') + '</strong></p>'
 			+ '<p>Your permission level : ' + user.get('permission') + '</p>'
 			+ '<a onclick="User_logout()">点此注销</a>'
