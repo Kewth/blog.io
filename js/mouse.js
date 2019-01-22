@@ -25,7 +25,7 @@ onload = function() {
 				$elem.innerHTML = "Kewth's";
 				break;
 			case 4:
-				$elem.innerHTML = "Bolg!!!";
+				$elem.innerHTML = "Blog!!!";
 				break;
             case 5:
                 $elem.innerText = "OωO";
@@ -73,7 +73,7 @@ onload = function() {
                 break;
             default:
 				if(click_cnt >= tot_rd)
-				{	
+				{
 					click_cnt = 0;
 					$elem.innerText = "❤❤❤";
 				}
