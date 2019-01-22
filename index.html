@@ -34,6 +34,9 @@ header-img: img/HY_zly.jpg
 <!-- don't zai zhe xia mian do anything -->
 {% for post in paginator.posts %}
 {% if post.hide %}
+<a href="{{ post.url | prepend: site.baseurl }}">
+	<p> {{ post.title }} （未完成） </p>
+</a>
 {% else %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
