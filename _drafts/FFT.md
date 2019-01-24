@@ -1,11 +1,9 @@
 ---
 layout: post
-title: 多项式
+title: FFT
 date:
 categories: blog
 tags: []
-description:
+description: FFT 的操作
 hide: true
 ---
-
-
