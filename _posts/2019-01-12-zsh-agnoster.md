@@ -49,7 +49,7 @@ rm -rf fonts
 
 成功以后，直接使用其提供的补丁字体（例如我直接把 Ubuntu Mono Italic 换成了 Ubuntu Mono derivative Powerline Italic），还是熟悉的斜体，但是箭头板正了！分支符号出现了！
 
-对比：  
+对比：
 ![](/post-img/zsh-agnoster--before.png)
 ![](/post-img/zsh-agnoster--after.png)
 
